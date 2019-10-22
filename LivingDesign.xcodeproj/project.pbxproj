@@ -24,6 +24,7 @@
 		4347ABA72354A1C300AF0F9D /* NewProduct.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347ABA62354A1C300AF0F9D /* NewProduct.storyboard */; };
 		4347ABA92354A1D900AF0F9D /* Delete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347ABA82354A1D900AF0F9D /* Delete.storyboard */; };
 		439256AA2354A57300387FD3 /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439256A92354A57300387FD3 /* Footer.swift */; };
+		9F77ACCB235DD44000C8E7C0 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77ACCA235DD44000C8E7C0 /* Detail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		4347ABA62354A1C300AF0F9D /* NewProduct.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewProduct.storyboard; sourceTree = "<group>"; };
 		4347ABA82354A1D900AF0F9D /* Delete.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Delete.storyboard; sourceTree = "<group>"; };
 		439256A92354A57300387FD3 /* Footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footer.swift; sourceTree = "<group>"; };
+		9F77ACCA235DD44000C8E7C0 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				4347ABA62354A1C300AF0F9D /* NewProduct.storyboard */,
 				4347ABA82354A1D900AF0F9D /* Delete.storyboard */,
 				4347AB9A2354A13D00AF0F9D /* Footer.storyboard */,
+				9F77ACCA235DD44000C8E7C0 /* Detail.swift */,
 				439256A92354A57300387FD3 /* Footer.swift */,
 			);
 			path = View;
@@ -311,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4347AB6A2354A09D00AF0F9D /* AppDelegate.swift in Sources */,
+				9F77ACCB235DD44000C8E7C0 /* Detail.swift in Sources */,
 				4347AB6C2354A09D00AF0F9D /* SceneDelegate.swift in Sources */,
 				4347AB6E2354A09D00AF0F9D /* ContentView.swift in Sources */,
 				439256AA2354A57300387FD3 /* Footer.swift in Sources */,
