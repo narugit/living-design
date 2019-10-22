@@ -1,8 +1,8 @@
 //
-//  Detail.swift
+//  Edit.swift
 //  LivingDesign
 //
-//  Created by 荒木大晴 on 2019/10/21.
+//  Created by 荒木大晴 on 2019/10/22.
 //  Copyright © 2019 DSN. All rights reserved.
 //
 
@@ -10,10 +10,9 @@ import UIKit
 import Foundation
 import PDFKit
 
-class Detail: UIViewController {
+class Edit: UIViewController {
     
    
-
     //@IBOutlet weak var productImage: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var category: UILabel!
@@ -61,5 +60,6 @@ class Detail: UIViewController {
     
     
 }
+
 
 

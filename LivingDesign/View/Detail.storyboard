@@ -10,7 +10,7 @@
         <!--Detail-->
         <scene sceneID="Awu-YE-oZb">
             <objects>
-                <viewController storyboardIdentifier="Detail" id="dQA-Ua-WLk" customClass="Detail" customModule="LivingDesign" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewControllerID" id="dQA-Ua-WLk" customClass="Detail" customModule="LivingDesign" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hLn-RV-3mt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,10 +71,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5t4-g5-jSG">
-                                <rect key="frame" x="48" y="117" width="319" height="319"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="epa-WX-76M">
                                 <rect key="frame" x="0.0" y="52" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -83,7 +79,7 @@
                                         <rightBarButtonItems>
                                             <barButtonItem title="廃棄" id="f3z-Bb-nkW" userLabel="delete">
                                                 <connections>
-                                                    <action selector="delete:" destination="dQA-Ua-WLk" id="XSY-Do-nLO"/>
+                                                    <action selector="discard:" destination="dQA-Ua-WLk" id="Ibz-Ou-ejE"/>
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem title="買替" id="MEF-EJ-d0c" userLabel="change">
@@ -177,6 +173,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fnf-3y-r1W" customClass="PDFView">
+                                <rect key="frame" x="61" y="140" width="306" height="254"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="7Sv-iX-teP"/>
@@ -191,7 +192,7 @@
                         <outlet property="model" destination="M7V-aN-yuJ" id="uWW-65-3LX"/>
                         <outlet property="name" destination="kzl-xa-f04" id="KpY-rA-1hq"/>
                         <outlet property="price" destination="Ncw-VS-SRW" id="FaP-bn-BV2"/>
-                        <outlet property="productimage" destination="5t4-g5-jSG" id="rxy-qi-YL5"/>
+                        <outlet property="productImage" destination="fnf-3y-r1W" id="oT1-AH-wbp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOu-0G-U6y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
