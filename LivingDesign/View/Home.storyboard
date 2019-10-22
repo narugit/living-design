@@ -4,24 +4,69 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Home3-->
         <scene sceneID="iYJ-2m-Rlo">
             <objects>
-                <viewController storyboardIdentifier="HomeViewControllerID" id="qv8-ee-q9t" customClass="Home" customModule="LivingDesign" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home3ViewControllerID" id="qv8-ee-q9t" customClass="Home3" customModule="LivingDesign" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xjo-Ow-9Ha">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysn-BO-E6d">
-                                <rect key="frame" x="186" y="317" width="46" height="21"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="krB-6x-gLi">
+                                <rect key="frame" x="30" y="44" width="354" height="818"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mxr-9s-cQp">
+                                    <size key="itemSize" width="115" height="116"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="lOt-fs-0fQ" customClass="HomeItemCell" customModule="LivingDesign" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="115" height="116"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="RCr-IS-LFF">
+                                            <rect key="frame" x="0.0" y="0.0" width="115" height="116"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jvJ-25-DnC">
+                                                    <rect key="frame" x="8.5458612975514825" y="8" width="94.999999999999929" height="75.000000000000014"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhU-Vt-rtD">
+                                                    <rect key="frame" x="8" y="83" width="94.999999999999929" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="qhU-Vt-rtD" secondAttribute="trailing" constant="10" id="ahv-Pu-b4B"/>
+                                                <constraint firstItem="qhU-Vt-rtD" firstAttribute="leading" secondItem="RCr-IS-LFF" secondAttribute="leading" constant="10" id="gET-32-2xR"/>
+                                                <constraint firstAttribute="bottom" secondItem="qhU-Vt-rtD" secondAttribute="bottom" constant="12" id="huB-aB-rGc"/>
+                                                <constraint firstItem="qhU-Vt-rtD" firstAttribute="top" secondItem="RCr-IS-LFF" secondAttribute="top" constant="83" id="ySO-ID-v1r"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="115" height="116"/>
+                                        <connections>
+                                            <outlet property="img" destination="jvJ-25-DnC" id="nb1-GK-e6a"/>
+                                            <outlet property="label" destination="qhU-Vt-rtD" id="bb8-Mi-Noc"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="qv8-ee-q9t" id="QuS-aA-NQh"/>
+                                    <outlet property="delegate" destination="qv8-ee-q9t" id="oOJ-ox-l6t"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="EkR-Ua-mdL"/>
@@ -29,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAc-Ve-eKa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="212"/>
+            <point key="canvasLocation" x="134.78260869565219" y="211.60714285714286"/>
         </scene>
     </scenes>
 </document>
