@@ -26,6 +26,7 @@
 		4390DD1B235E9695009E3C6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347AB742354A09E00AF0F9D /* LaunchScreen.storyboard */; };
 		439256AA2354A57300387FD3 /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439256A92354A57300387FD3 /* Footer.swift */; };
 		43F8B941235E885D000E084E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F8B940235E885D000E084E /* Home.swift */; };
+		9F77ACCB235DD44000C8E7C0 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77ACCA235DD44000C8E7C0 /* Detail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		4390DD19235E8F7C009E3C6F /* RootScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RootScreen.storyboard; sourceTree = "<group>"; };
 		439256A92354A57300387FD3 /* Footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footer.swift; sourceTree = "<group>"; };
 		43F8B940235E885D000E084E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		9F77ACCA235DD44000C8E7C0 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				4347ABA62354A1C300AF0F9D /* NewProduct.storyboard */,
 				4347ABA82354A1D900AF0F9D /* Delete.storyboard */,
 				4347AB9A2354A13D00AF0F9D /* Footer.storyboard */,
+				9F77ACCA235DD44000C8E7C0 /* Detail.swift */,
 				439256A92354A57300387FD3 /* Footer.swift */,
 				4390DD13235E8C9E009E3C6F /* RootViewWireframe.swift */,
 				4390DD15235E8CBF009E3C6F /* RootViewController.swift */,
@@ -321,6 +324,7 @@
 				4390DD14235E8C9E009E3C6F /* RootViewWireframe.swift in Sources */,
 				4390DD16235E8CBF009E3C6F /* RootViewController.swift in Sources */,
 				43F8B941235E885D000E084E /* Home.swift in Sources */,
+				9F77ACCB235DD44000C8E7C0 /* Detail.swift in Sources */,
 				439256AA2354A57300387FD3 /* Footer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
