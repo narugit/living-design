@@ -27,3 +27,6 @@ DerivedData/
 
 ## For Mac
 .DS_Store
+
+## Cocoapod
+Pods/*
