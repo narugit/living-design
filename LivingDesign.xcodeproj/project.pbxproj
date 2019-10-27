@@ -43,6 +43,8 @@
 		43F8B941235E885D000E084E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F8B940235E885D000E084E /* Home.swift */; };
 		44F26FA1392E1F1E44661A2E /* Pods_LivingDesignTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA0394071195B0505D9AE90 /* Pods_LivingDesignTests.framework */; };
 		863359192084EA19900F9075 /* Pods_LivingDesign_LivingDesignUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0864A8326866EA9BE68969 /* Pods_LivingDesign_LivingDesignUITests.framework */; };
+		9F24B7E8235F01B300035BFD /* Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F24B7E7235F01B300035BFD /* Edit.swift */; };
+		9F24B7EA235F056500035BFD /* NewProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F24B7E9235F056400035BFD /* NewProduct.swift */; };
 		9F77ACCB235DD44000C8E7C0 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77ACCA235DD44000C8E7C0 /* Detail.swift */; };
 		B79F056B1887883B44F576FE /* Pods_LivingDesign.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375DE56DCAA66455458C36C4 /* Pods_LivingDesign.framework */; };
 /* End PBXBuildFile section */
@@ -110,6 +112,8 @@
 		52ED5418BE562650CEB4AA53 /* Pods-LivingDesignTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivingDesignTests.debug.xcconfig"; path = "Target Support Files/Pods-LivingDesignTests/Pods-LivingDesignTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D2677BED2440623EBE096B8 /* Pods-LivingDesign-LivingDesignUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivingDesign-LivingDesignUITests.release.xcconfig"; path = "Target Support Files/Pods-LivingDesign-LivingDesignUITests/Pods-LivingDesign-LivingDesignUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6B0864A8326866EA9BE68969 /* Pods_LivingDesign_LivingDesignUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LivingDesign_LivingDesignUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F24B7E7235F01B300035BFD /* Edit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edit.swift; sourceTree = "<group>"; };
+		9F24B7E9235F056400035BFD /* NewProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProduct.swift; sourceTree = "<group>"; };
 		9F77ACCA235DD44000C8E7C0 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		AFA0394071195B0505D9AE90 /* Pods_LivingDesignTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LivingDesignTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB686576C3927117B67891E /* Pods-LivingDesign-LivingDesignUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivingDesign-LivingDesignUITests.debug.xcconfig"; path = "Target Support Files/Pods-LivingDesign-LivingDesignUITests/Pods-LivingDesign-LivingDesignUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -233,7 +237,9 @@
 				4347ABA82354A1D900AF0F9D /* Delete.storyboard */,
 				4347AB9A2354A13D00AF0F9D /* Footer.storyboard */,
 				9F77ACCA235DD44000C8E7C0 /* Detail.swift */,
+				9F24B7E7235F01B300035BFD /* Edit.swift */,
 				439256A92354A57300387FD3 /* Footer.swift */,
+				9F24B7E9235F056400035BFD /* NewProduct.swift */,
 				4390DD13235E8C9E009E3C6F /* RootViewWireframe.swift */,
 				4390DD15235E8CBF009E3C6F /* RootViewController.swift */,
 				4390DD19235E8F7C009E3C6F /* RootScreen.storyboard */,
@@ -556,7 +562,9 @@
 				4390DD16235E8CBF009E3C6F /* RootViewController.swift in Sources */,
 				43F8B941235E885D000E084E /* Home.swift in Sources */,
 				436874752361E941001109AF /* DataStructure.swift in Sources */,
+				9F24B7E8235F01B300035BFD /* Edit.swift in Sources */,
 				9F77ACCB235DD44000C8E7C0 /* Detail.swift in Sources */,
+				9F24B7EA235F056500035BFD /* NewProduct.swift in Sources */,
 				439256AA2354A57300387FD3 /* Footer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
