@@ -173,8 +173,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fnf-3y-r1W" customClass="PDFView">
-                                <rect key="frame" x="61" y="140" width="306" height="254"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fnf-3y-r1W" customClass="UIImageView">
+                                <rect key="frame" x="61" y="140" width="285" height="285"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
@@ -192,7 +192,7 @@
                         <outlet property="model" destination="M7V-aN-yuJ" id="uWW-65-3LX"/>
                         <outlet property="name" destination="kzl-xa-f04" id="KpY-rA-1hq"/>
                         <outlet property="price" destination="Ncw-VS-SRW" id="FaP-bn-BV2"/>
-                        <outlet property="productImage" destination="fnf-3y-r1W" id="oT1-AH-wbp"/>
+                        <outlet property="productImage" destination="fnf-3y-r1W" id="7p8-Vr-tR6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOu-0G-U6y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
