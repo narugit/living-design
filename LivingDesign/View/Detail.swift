@@ -24,22 +24,18 @@ class Detail: UIViewController {
     @IBOutlet weak var assessment: UILabel!
     @IBOutlet weak var candidate: UILabel!
     @IBOutlet weak var memo: UILabel!
-    @IBOutlet weak var productImage: PDFView!
+ 
+    @IBOutlet weak var productImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         name.text = "洗濯機"
         
         
-        if let pdfURL = Bundle.main.url(forResource: "washing-machine", withExtension: "pdf") {
-            if let pdf = PDFDocument(url: pdfURL) {
-                productImage.document = pdf
-                // PDFの拡大率を調整する
-                productImage.autoScales = true
-                // 表示モード
-                productImage.displayMode = .singlePageContinuous
-            }
-        }
+        
+        productImage.image = UIImage(named: "washing-machine")
+        
+        
         
     }
     
