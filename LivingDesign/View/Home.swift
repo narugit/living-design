@@ -20,7 +20,7 @@ class Home: UIViewController, UICollectionViewDataSource, UICollectionViewDelega
         super.viewDidLoad()
         self.titleLabel.text = "家電"
         let layout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
+        layout.itemSize = CGSize(width:self.view.frame.width / 4, height:self.view.frame.width / 4)
         self.collectionView.collectionViewLayout = layout
     }
     
@@ -52,11 +52,6 @@ class Home: UIViewController, UICollectionViewDataSource, UICollectionViewDelega
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let cellSize : CGFloat = self.view.bounds.width / 5
-        return CGSize(width: cellSize, height: cellSize)
     }
     
     func collectionView(_ collectionView: UICollectionView,
