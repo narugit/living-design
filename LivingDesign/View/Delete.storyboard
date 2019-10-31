@@ -35,7 +35,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DeleteCell" id="gZv-dE-nrF">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DeleteCell" id="gZv-dE-nrF" customClass="DeleteCollectionViewCell" customModule="LivingDesign" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="131" height="136"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ekx-Nh-tXn">
@@ -54,7 +54,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCD-3g-Bex">
                                                     <rect key="frame" x="3" y="4" width="20" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.75686274509803919" green="0.094117647058823528" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <state key="normal" title="×">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
@@ -64,6 +64,11 @@
                                                             <integer key="value" value="10"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="touchDown:" destination="gZv-dE-nrF" eventType="touchDown" id="LAf-5J-5oL"/>
+                                                        <action selector="touchUpInside:" destination="gZv-dE-nrF" eventType="touchUpInside" id="SUD-uX-oLt"/>
+                                                        <action selector="touchUpOutside:" destination="gZv-dE-nrF" eventType="touchUpOutside" id="YqZ-zP-jir"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -78,6 +83,9 @@
                                         </collectionViewCellContentView>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="customSize" width="131" height="136"/>
+                                        <connections>
+                                            <outlet property="deleteButton" destination="mCD-3g-Bex" id="nX5-eg-Gyj"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
