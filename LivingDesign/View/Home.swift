@@ -11,7 +11,7 @@ import UIKit
 
 class Home: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     private let photos = ["washing-machine", "copier", "oven", "tv" ]
-    private let names = ["洗濯機", "コピー機", "オーブン", "テレビ"]
+    private let names = ["洗濯機ほげほげ", "コピー機", "オーブン", "テレビ"]
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
