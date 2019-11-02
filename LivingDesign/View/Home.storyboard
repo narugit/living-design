@@ -42,12 +42,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="131" height="164"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhU-Vt-rtD">
-                                                    <rect key="frame" x="37" y="128" width="57" height="35"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="35" id="K8l-Bw-011"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qhU-Vt-rtD">
+                                                    <rect key="frame" x="48" y="118" width="35.5" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -63,7 +60,7 @@
                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstItem="jvJ-25-DnC" firstAttribute="centerX" secondItem="RCr-IS-LFF" secondAttribute="centerX" id="QkI-iU-2i7"/>
-                                                <constraint firstAttribute="bottom" secondItem="qhU-Vt-rtD" secondAttribute="bottom" constant="1" id="Tvd-No-Lzb"/>
+                                                <constraint firstItem="qhU-Vt-rtD" firstAttribute="top" secondItem="jvJ-25-DnC" secondAttribute="bottom" constant="10" id="nU7-de-9kw"/>
                                                 <constraint firstItem="qhU-Vt-rtD" firstAttribute="centerX" secondItem="RCr-IS-LFF" secondAttribute="centerX" id="qmR-zf-Lrg"/>
                                                 <constraint firstItem="jvJ-25-DnC" firstAttribute="top" secondItem="RCr-IS-LFF" secondAttribute="top" constant="8" id="zYx-Eg-qQm"/>
                                             </constraints>
