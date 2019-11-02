@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43407CC5236D72DC00736DF2 /* history.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 43407CC3236D72DC00736DF2 /* history.pdf */; };
 		4347AB6A2354A09D00AF0F9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347AB692354A09D00AF0F9D /* AppDelegate.swift */; };
 		4347AB702354A09E00AF0F9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4347AB6F2354A09E00AF0F9D /* Assets.xcassets */; };
 		4347AB732354A09E00AF0F9D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4347AB722354A09E00AF0F9D /* Preview Assets.xcassets */; };
 		4347AB812354A09E00AF0F9D /* LivingDesignTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347AB802354A09E00AF0F9D /* LivingDesignTests.swift */; };
 		4347AB8C2354A09E00AF0F9D /* LivingDesignUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4347AB8B2354A09E00AF0F9D /* LivingDesignUITests.swift */; };
-		4347AB9B2354A13D00AF0F9D /* Footer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347AB9A2354A13D00AF0F9D /* Footer.storyboard */; };
 		4347AB9D2354A15800AF0F9D /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347AB9C2354A15800AF0F9D /* Home.storyboard */; };
 		4347AB9F2354A17200AF0F9D /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347AB9E2354A17200AF0F9D /* Detail.storyboard */; };
 		4347ABA12354A18900AF0F9D /* Edit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347ABA02354A18900AF0F9D /* Edit.storyboard */; };
@@ -43,7 +43,11 @@
 		43A3CEF6235F01DB0009E965 /* hairdryer.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 43A3CEF4235F01DB0009E965 /* hairdryer.pdf */; };
 		43C07A6C2369CE2500675363 /* Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C07A6B2369CE2500675363 /* Delete.swift */; };
 		43C07A6E236A593F00675363 /* DeleteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C07A6D236A593F00675363 /* DeleteCollectionViewCell.swift */; };
+		43C32E57236D7DC900D116D8 /* home.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 43C32E56236D7DC900D116D8 /* home.pdf */; };
+		43C32E59236D7DCD00D116D8 /* settings.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 43C32E58236D7DCD00D116D8 /* settings.pdf */; };
 		43C37058236D4A0D0033BDCD /* star.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 43C37057236D4A0D0033BDCD /* star.pdf */; };
+		43C37064236D6B680033BDCD /* Footer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43C37063236D6B680033BDCD /* Footer.xib */; };
+		43C37066236D6BBD0033BDCD /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C37065236D6BBD0033BDCD /* test.storyboard */; };
 		43CB4957236D052900FB2C6B /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CB4956236D052900FB2C6B /* HistoryTableViewCell.swift */; };
 		43F8B941235E885D000E084E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F8B940235E885D000E084E /* Home.swift */; };
 		44F26FA1392E1F1E44661A2E /* Pods_LivingDesignTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA0394071195B0505D9AE90 /* Pods_LivingDesignTests.framework */; };
@@ -74,6 +78,7 @@
 /* Begin PBXFileReference section */
 		36D0BF2FE82A185B925FC99B /* Pods-LivingDesignTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivingDesignTests.release.xcconfig"; path = "Target Support Files/Pods-LivingDesignTests/Pods-LivingDesignTests.release.xcconfig"; sourceTree = "<group>"; };
 		375DE56DCAA66455458C36C4 /* Pods_LivingDesign.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LivingDesign.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43407CC3236D72DC00736DF2 /* history.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = history.pdf; sourceTree = "<group>"; };
 		4347AB662354A09D00AF0F9D /* LivingDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LivingDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4347AB692354A09D00AF0F9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4347AB6F2354A09E00AF0F9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,7 +91,6 @@
 		4347AB872354A09E00AF0F9D /* LivingDesignUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LivingDesignUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4347AB8B2354A09E00AF0F9D /* LivingDesignUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivingDesignUITests.swift; sourceTree = "<group>"; };
 		4347AB8D2354A09E00AF0F9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4347AB9A2354A13D00AF0F9D /* Footer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Footer.storyboard; sourceTree = "<group>"; };
 		4347AB9C2354A15800AF0F9D /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		4347AB9E2354A17200AF0F9D /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		4347ABA02354A18900AF0F9D /* Edit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Edit.storyboard; sourceTree = "<group>"; };
@@ -116,7 +120,11 @@
 		43A3CEF4235F01DB0009E965 /* hairdryer.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hairdryer.pdf; sourceTree = "<group>"; };
 		43C07A6B2369CE2500675363 /* Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delete.swift; sourceTree = "<group>"; };
 		43C07A6D236A593F00675363 /* DeleteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCollectionViewCell.swift; sourceTree = "<group>"; };
+		43C32E56236D7DC900D116D8 /* home.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = home.pdf; sourceTree = "<group>"; };
+		43C32E58236D7DCD00D116D8 /* settings.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = settings.pdf; sourceTree = "<group>"; };
 		43C37057236D4A0D0033BDCD /* star.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = star.pdf; sourceTree = "<group>"; };
+		43C37063236D6B680033BDCD /* Footer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Footer.xib; sourceTree = "<group>"; };
+		43C37065236D6BBD0033BDCD /* test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
 		43CB4956236D052900FB2C6B /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		43F8B940235E885D000E084E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		52ED5418BE562650CEB4AA53 /* Pods-LivingDesignTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivingDesignTests.debug.xcconfig"; path = "Target Support Files/Pods-LivingDesignTests/Pods-LivingDesignTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -239,6 +247,8 @@
 			children = (
 				4347AB9C2354A15800AF0F9D /* Home.storyboard */,
 				43F8B940235E885D000E084E /* Home.swift */,
+				43C37063236D6B680033BDCD /* Footer.xib */,
+				439256A92354A57300387FD3 /* Footer.swift */,
 				4347AB9E2354A17200AF0F9D /* Detail.storyboard */,
 				4347ABA02354A18900AF0F9D /* Edit.storyboard */,
 				4347ABA22354A19600AF0F9D /* History.storyboard */,
@@ -248,15 +258,14 @@
 				4347ABA62354A1C300AF0F9D /* NewProduct.storyboard */,
 				4347ABA82354A1D900AF0F9D /* Delete.storyboard */,
 				43C07A6B2369CE2500675363 /* Delete.swift */,
-				4347AB9A2354A13D00AF0F9D /* Footer.storyboard */,
+				43C07A6D236A593F00675363 /* DeleteCollectionViewCell.swift */,
 				9F77ACCA235DD44000C8E7C0 /* Detail.swift */,
 				9F24B7E7235F01B300035BFD /* Edit.swift */,
-				439256A92354A57300387FD3 /* Footer.swift */,
 				9F24B7E9235F056400035BFD /* NewProduct.swift */,
 				4390DD13235E8C9E009E3C6F /* RootViewWireframe.swift */,
 				4390DD15235E8CBF009E3C6F /* RootViewController.swift */,
 				4390DD19235E8F7C009E3C6F /* RootScreen.storyboard */,
-				43C07A6D236A593F00675363 /* DeleteCollectionViewCell.swift */,
+				43C37065236D6BBD0033BDCD /* test.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -284,9 +293,12 @@
 				43A3CEE6235EF61B0009E965 /* oven.pdf */,
 				43A3CEE5235EF61B0009E965 /* pc.pdf */,
 				43A3CEE2235EF61B0009E965 /* refrigerator.pdf */,
+				43407CC3236D72DC00736DF2 /* history.pdf */,
 				43A3CEE3235EF61B0009E965 /* rice-cooker.pdf */,
 				43A3CEEF235F01D00009E965 /* aircon.pdf */,
 				43A3CEF0235F01D00009E965 /* coffee-machine.pdf */,
+				43C32E56236D7DC900D116D8 /* home.pdf */,
+				43C32E58236D7DCD00D116D8 /* settings.pdf */,
 				43C37057236D4A0D0033BDCD /* star.pdf */,
 				43A3CEF4235F01DB0009E965 /* hairdryer.pdf */,
 				43A3CEF3235F01DB0009E965 /* microwave.pdf */,
@@ -422,18 +434,22 @@
 				43C37058236D4A0D0033BDCD /* star.pdf in Resources */,
 				43A3CED3235EE0650009E965 /* washing-machine.pdf in Resources */,
 				43A3CEE0235EF6110009E965 /* copier.pdf in Resources */,
+				43407CC5236D72DC00736DF2 /* history.pdf in Resources */,
 				4390DD1A235E8F7C009E3C6F /* RootScreen.storyboard in Resources */,
 				4347AB9D2354A15800AF0F9D /* Home.storyboard in Resources */,
+				43C32E57236D7DC900D116D8 /* home.pdf in Resources */,
 				4347AB732354A09E00AF0F9D /* Preview Assets.xcassets in Resources */,
+				43C37066236D6BBD0033BDCD /* test.storyboard in Resources */,
+				43C32E59236D7DCD00D116D8 /* settings.pdf in Resources */,
 				4347ABA32354A19600AF0F9D /* History.storyboard in Resources */,
 				43A3CEE9235EF61B0009E965 /* refrigerator.pdf in Resources */,
 				43A3CEEA235EF61B0009E965 /* rice-cooker.pdf in Resources */,
 				43A3CEF2235F01D00009E965 /* coffee-machine.pdf in Resources */,
 				4347AB702354A09E00AF0F9D /* Assets.xcassets in Resources */,
 				43A3CEF5235F01DB0009E965 /* microwave.pdf in Resources */,
+				43C37064236D6B680033BDCD /* Footer.xib in Resources */,
 				4347ABA52354A1A200AF0F9D /* Setting.storyboard in Resources */,
 				43A3CEF1235F01D00009E965 /* aircon.pdf in Resources */,
-				4347AB9B2354A13D00AF0F9D /* Footer.storyboard in Resources */,
 				4347AB9F2354A17200AF0F9D /* Detail.storyboard in Resources */,
 				43A3CEED235EF61B0009E965 /* oven.pdf in Resources */,
 				4347ABA92354A1D900AF0F9D /* Delete.storyboard in Resources */,

@@ -20,7 +20,7 @@ class Home: UIViewController, UICollectionViewDataSource, UICollectionViewDelega
         super.viewDidLoad()
         self.titleLabel.text = "家電"
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width:self.view.frame.width / 4, height:self.view.frame.width / 4)
+        layout.itemSize = CGSize(width: self.view.frame.width / 4, height: (self.view.frame.width / 4 + 50))
         self.collectionView.collectionViewLayout = layout
     }
     
@@ -38,9 +38,12 @@ class Home: UIViewController, UICollectionViewDataSource, UICollectionViewDelega
 
         let imageView = cell.contentView.viewWithTag(1) as! UIImageView
         let cellImage = UIImage(named: photos[indexPath.row])
+        imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         imageView.image = cellImage
         // imageViewのサイズ確認用
         // imageView.backgroundColor = .blue
+        
+    
 
         let label = cell.contentView.viewWithTag(2) as! UILabel
         label.text = names[indexPath.row]
