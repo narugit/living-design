@@ -20,6 +20,7 @@
 		4347ABA52354A1A200AF0F9D /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347ABA42354A1A200AF0F9D /* Setting.storyboard */; };
 		4347ABA72354A1C300AF0F9D /* NewProduct.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347ABA62354A1C300AF0F9D /* NewProduct.storyboard */; };
 		4347ABA92354A1D900AF0F9D /* Delete.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347ABA82354A1D900AF0F9D /* Delete.storyboard */; };
+		435C5D01236A770E007ABCFC /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435C5D00236A770E007ABCFC /* History.swift */; };
 		436874752361E941001109AF /* DataStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436874742361E941001109AF /* DataStructure.swift */; };
 		4390DD14235E8C9E009E3C6F /* RootViewWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4390DD13235E8C9E009E3C6F /* RootViewWireframe.swift */; };
 		4390DD16235E8CBF009E3C6F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4390DD15235E8CBF009E3C6F /* RootViewController.swift */; };
@@ -42,6 +43,8 @@
 		43A3CEF6235F01DB0009E965 /* hairdryer.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 43A3CEF4235F01DB0009E965 /* hairdryer.pdf */; };
 		43C07A6C2369CE2500675363 /* Delete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C07A6B2369CE2500675363 /* Delete.swift */; };
 		43C07A6E236A593F00675363 /* DeleteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C07A6D236A593F00675363 /* DeleteCollectionViewCell.swift */; };
+		43C37058236D4A0D0033BDCD /* star.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 43C37057236D4A0D0033BDCD /* star.pdf */; };
+		43CB4957236D052900FB2C6B /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CB4956236D052900FB2C6B /* HistoryTableViewCell.swift */; };
 		43F8B941235E885D000E084E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F8B940235E885D000E084E /* Home.swift */; };
 		44F26FA1392E1F1E44661A2E /* Pods_LivingDesignTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA0394071195B0505D9AE90 /* Pods_LivingDesignTests.framework */; };
 		863359192084EA19900F9075 /* Pods_LivingDesign_LivingDesignUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0864A8326866EA9BE68969 /* Pods_LivingDesign_LivingDesignUITests.framework */; };
@@ -91,6 +94,7 @@
 		4347ABA42354A1A200AF0F9D /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		4347ABA62354A1C300AF0F9D /* NewProduct.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewProduct.storyboard; sourceTree = "<group>"; };
 		4347ABA82354A1D900AF0F9D /* Delete.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Delete.storyboard; sourceTree = "<group>"; };
+		435C5D00236A770E007ABCFC /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
 		436874742361E941001109AF /* DataStructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructure.swift; sourceTree = "<group>"; };
 		4390DD13235E8C9E009E3C6F /* RootViewWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewWireframe.swift; sourceTree = "<group>"; };
 		4390DD15235E8CBF009E3C6F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +116,8 @@
 		43A3CEF4235F01DB0009E965 /* hairdryer.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = hairdryer.pdf; sourceTree = "<group>"; };
 		43C07A6B2369CE2500675363 /* Delete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delete.swift; sourceTree = "<group>"; };
 		43C07A6D236A593F00675363 /* DeleteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCollectionViewCell.swift; sourceTree = "<group>"; };
+		43C37057236D4A0D0033BDCD /* star.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = star.pdf; sourceTree = "<group>"; };
+		43CB4956236D052900FB2C6B /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
 		43F8B940235E885D000E084E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		52ED5418BE562650CEB4AA53 /* Pods-LivingDesignTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivingDesignTests.debug.xcconfig"; path = "Target Support Files/Pods-LivingDesignTests/Pods-LivingDesignTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D2677BED2440623EBE096B8 /* Pods-LivingDesign-LivingDesignUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivingDesign-LivingDesignUITests.release.xcconfig"; path = "Target Support Files/Pods-LivingDesign-LivingDesignUITests/Pods-LivingDesign-LivingDesignUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -236,6 +242,8 @@
 				4347AB9E2354A17200AF0F9D /* Detail.storyboard */,
 				4347ABA02354A18900AF0F9D /* Edit.storyboard */,
 				4347ABA22354A19600AF0F9D /* History.storyboard */,
+				435C5D00236A770E007ABCFC /* History.swift */,
+				43CB4956236D052900FB2C6B /* HistoryTableViewCell.swift */,
 				4347ABA42354A1A200AF0F9D /* Setting.storyboard */,
 				4347ABA62354A1C300AF0F9D /* NewProduct.storyboard */,
 				4347ABA82354A1D900AF0F9D /* Delete.storyboard */,
@@ -279,6 +287,7 @@
 				43A3CEE3235EF61B0009E965 /* rice-cooker.pdf */,
 				43A3CEEF235F01D00009E965 /* aircon.pdf */,
 				43A3CEF0235F01D00009E965 /* coffee-machine.pdf */,
+				43C37057236D4A0D0033BDCD /* star.pdf */,
 				43A3CEF4235F01DB0009E965 /* hairdryer.pdf */,
 				43A3CEF3235F01DB0009E965 /* microwave.pdf */,
 				43A3CEE4235EF61B0009E965 /* tv.pdf */,
@@ -410,6 +419,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43C37058236D4A0D0033BDCD /* star.pdf in Resources */,
 				43A3CED3235EE0650009E965 /* washing-machine.pdf in Resources */,
 				43A3CEE0235EF6110009E965 /* copier.pdf in Resources */,
 				4390DD1A235E8F7C009E3C6F /* RootScreen.storyboard in Resources */,
@@ -564,6 +574,7 @@
 			files = (
 				4347AB6A2354A09D00AF0F9D /* AppDelegate.swift in Sources */,
 				4390DD14235E8C9E009E3C6F /* RootViewWireframe.swift in Sources */,
+				43CB4957236D052900FB2C6B /* HistoryTableViewCell.swift in Sources */,
 				43A1C8BA236518A1007E5BC2 /* RealmUtility.swift in Sources */,
 				4390DD16235E8CBF009E3C6F /* RootViewController.swift in Sources */,
 				43F8B941235E885D000E084E /* Home.swift in Sources */,
@@ -572,6 +583,7 @@
 				9F77ACCB235DD44000C8E7C0 /* Detail.swift in Sources */,
 				43C07A6C2369CE2500675363 /* Delete.swift in Sources */,
 				9F24B7EA235F056500035BFD /* NewProduct.swift in Sources */,
+				435C5D01236A770E007ABCFC /* History.swift in Sources */,
 				439256AA2354A57300387FD3 /* Footer.swift in Sources */,
 				43C07A6E236A593F00675363 /* DeleteCollectionViewCell.swift in Sources */,
 			);
