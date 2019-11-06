@@ -11,6 +11,7 @@ import UIKit
 
 class History: UIViewController, UITableViewDataSource, UITableViewDelegate{
     private let photos = ["washing-machine", "copier", "oven", "tv" ]
+    private let genres = ["家電", "家電", "家電", "家電"]
     private let names = ["洗濯機", "コピー機", "オーブン", "テレビ"]
     private let isUsings = [true, false, false, true]
     @IBOutlet weak var tableView: UITableView!
@@ -28,7 +29,13 @@ class History: UIViewController, UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath) as! HistoryTabelViewCell
         
-        cell.setCell(indexPath: indexPath, photoName: photos[indexPath.row], name: names[indexPath.row], date: "2019/11/1", isUsing: isUsings[indexPath.row])
+        var genre = genres[indexPath.row]
+        
+        if(indexPath.row > 0){
+            genre = genres[indexPath.row] == genres[indexPath.row-1] ? "" : genre
+        }
+        
+        cell.setCell(indexPath: indexPath, photoName: photos[indexPath.row], name: names[indexPath.row], date: "2019/11/1", isUsing: isUsings[indexPath.row], genre: genre)
         
         return cell
     }
