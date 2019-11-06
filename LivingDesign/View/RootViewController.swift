@@ -10,7 +10,7 @@ import UIKit
 
 final internal class RootViewController: UIViewController {
     private let wireframe: RootViewWireframe = RootViewWireframe()
-    private var nextSceneName = "test"
+    private var nextSceneName = "Home"
     private var nextStoryBoard: UIStoryboard? = nil
     private var nextViewController: UIViewController? = nil
     
