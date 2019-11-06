@@ -51,17 +51,28 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCD-3g-Bex">
-                                                    <rect key="frame" x="3" y="4" width="20" height="20"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.75686274509803919" green="0.094117647058823528" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HV0-Ji-wFU">
+                                                    <rect key="frame" x="15.5" y="8" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="HV0-Ji-wFU" secondAttribute="height" multiplier="1:1" id="0oZ-GP-6HC"/>
+                                                        <constraint firstAttribute="height" constant="100" id="7xs-ga-DX1"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCD-3g-Bex">
+                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                    <color key="backgroundColor" red="0.75686274509999996" green="0.094117647060000004" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="30" id="Ovo-ns-NEu"/>
+                                                        <constraint firstAttribute="height" constant="30" id="jTJ-Kg-Wbd"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                     <state key="normal" title="×">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </state>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                            <integer key="value" value="10"/>
+                                                            <integer key="value" value="15"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
@@ -70,19 +81,14 @@
                                                         <action selector="touchUpOutside:" destination="gZv-dE-nrF" eventType="touchUpOutside" id="YqZ-zP-jir"/>
                                                     </connections>
                                                 </button>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HV0-Ji-wFU">
-                                                    <rect key="frame" x="15.5" y="8" width="100" height="100"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="HV0-Ji-wFU" secondAttribute="height" multiplier="1:1" id="0oZ-GP-6HC"/>
-                                                        <constraint firstAttribute="height" constant="100" id="7xs-ga-DX1"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="HV0-Ji-wFU" firstAttribute="top" secondItem="ekx-Nh-tXn" secondAttribute="top" constant="8" id="KQg-l1-9KM"/>
+                                                <constraint firstItem="mCD-3g-Bex" firstAttribute="top" secondItem="ekx-Nh-tXn" secondAttribute="top" id="MwF-sH-lpk"/>
                                                 <constraint firstItem="HLM-zI-5wE" firstAttribute="centerX" secondItem="ekx-Nh-tXn" secondAttribute="centerX" id="YYg-AJ-3ap"/>
                                                 <constraint firstItem="HV0-Ji-wFU" firstAttribute="centerX" secondItem="ekx-Nh-tXn" secondAttribute="centerX" id="gmZ-Lf-MSZ"/>
                                                 <constraint firstAttribute="bottom" secondItem="HLM-zI-5wE" secondAttribute="bottom" constant="1" id="hi7-eh-GeO"/>
+                                                <constraint firstItem="mCD-3g-Bex" firstAttribute="leading" secondItem="ekx-Nh-tXn" secondAttribute="leading" id="oz6-DX-ODg"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
