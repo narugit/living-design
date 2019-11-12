@@ -14,7 +14,8 @@ class Home: UIViewController, UICollectionViewDataSource, UICollectionViewDelega
     private let names = ["洗濯機ほげほげ", "コピー機", "オーブン", "テレビ"]
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    var currentSelected : Int?
+    private let wireframe: RootViewWireframe = RootViewWireframe()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,9 +51,24 @@ class Home: UIViewController, UICollectionViewDataSource, UICollectionViewDelega
         // セルのサイズ確認用
         // cell.backgroundColor = .red
         
+        if self.currentSelected != nil && self.currentSelected == indexPath.row
+        {
+            print(names[indexPath.row])
+            let nextStoryBoard = UIStoryboard(name: "Detail", bundle: nil)
+            let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: "DetailViewControllerID")
+            self.wireframe.transition(to: nextViewController)
+        }
+
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        currentSelected = indexPath.row
+
+        // For reload the selected cell
+        collectionView.reloadItems(at: [indexPath])
+    }
+
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
