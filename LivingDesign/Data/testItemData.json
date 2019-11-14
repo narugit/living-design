@@ -1,0 +1,36 @@
+[
+    {
+        "id": "10000",
+        "name": "洗濯機",
+        "genre": {
+            "name": "家電"
+        },
+        "modelNumber": "111111",
+        "price": 20000,
+        "purchaseDate": "2019/11/10",
+        "warrantyPeriod": "2021/11/10",
+        "disposalDate": "2019/12/10",
+        "reason": "洗いやすい",
+        "confort": 4,
+        "otherTargets": "特になし",
+        "memo": "めっちゃ綺麗になる",
+        "isUse": true
+    },
+    {
+        "id": "10001",
+        "name": "テレビ",
+        "genre": {
+            "name": "家電"
+        },
+        "modelNumber": "22222",
+        "price": 10000,
+        "purchaseDate": "2019/08/10",
+        "warrantyPeriod": "2021/08/10",
+        "disposalDate": "2019/10/10",
+        "reason": "4K",
+        "confort": 5,
+        "otherTargets": "ブラビア",
+        "memo": "画質きれい",
+        "isUse": true
+    }
+]

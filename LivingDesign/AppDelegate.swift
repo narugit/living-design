@@ -33,13 +33,99 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Tell Realm to use this new configuration object for the default Realm
         Realm.Configuration.defaultConfiguration = config
 
-        //デフォルトのレルムに対してこの新しい設定オブジェクトを使用するようにRealmに指示します
+        // デフォルトのレルムに対してこの新しい設定オブジェクトを使用するようにRealmに指示します
         let realm = try! Realm()
         printRealmFilePath()
         print(realm, "Realm")
         print(config,"Realm Version")
 
+        // リリース時には削除する
+        // Data/test.*Data.jsonを読み込んで、Realmに書き込む
+        // jsonのデータにリセットしたい場合に使用
+        // そうでない場合は、下の行をコメントする
+        loadTestData()
+        
         return true
+    }
+    
+    func getFileData(_ filePath: String) -> Data? {
+      let fileData: Data?
+      do {
+        let fileUrl = URL(fileURLWithPath: filePath)
+        fileData = try Data(contentsOf: fileUrl)
+      } catch {
+        // ファイルデータの取得でエラーの場合
+        fileData = nil
+      }
+      return fileData
+    }
+    
+    func loadTestData(){
+        let realm = try! Realm()
+        
+        do {
+            let genreInRealm = realm.objects(Genre.self).first
+            let path = Bundle.main.path(forResource: "testGenreData", ofType:"json")
+            let data = getFileData(path!)
+            let testGenreData = try! JSONDecoder().decode(Genre.self, from: data!) as! Genre
+
+            if(genreInRealm == nil){
+                print("genreは空")
+                let genre = Genre()
+                genre.name = testGenreData.name
+                try! realm.write{
+                    realm.add(genre)
+                }
+            } else{
+                print("genreをjsonデータに更新")
+                try! realm.write{
+                    genreInRealm?.name = testGenreData.name
+                }
+            }
+        }
+        
+        do {
+            let itemInRealm = realm.objects(Item.self)
+            let path = Bundle.main.path(forResource: "testItemData", ofType:"json")
+            let data = getFileData(path!)
+            let testItemData = try! JSONDecoder().decode([Item].self, from: data!) as! [Item]
+            
+            if(itemInRealm == nil){
+                print("itemは空")
+                for tid in testItemData{
+                    let item = Item()
+                    item.name = tid.name
+                    item.setGenre(genre: tid.getGenre())
+                    item.modelNumber = tid.modelNumber
+                    item.price = tid.price
+                    item.purchaseDate = tid.purchaseDate
+                    item.warrantyPeriod = tid.warrantyPeriod
+                    item.reason = tid.reason
+                    item.confort = tid.confort
+                    item.otherTargets = tid.otherTargets
+                    item.memo = tid.memo
+                    try! realm.write{
+                        realm.add(item)
+                    }
+                }
+            } else{
+                print("itemをjsonデータに更新")
+                for (index, iir) in itemInRealm.enumerated(){
+                    try! realm.write{
+                        iir.name = testItemData[index].name
+                        iir.setGenre(genre: testItemData[index].getGenre())
+                        iir.modelNumber = testItemData[index].modelNumber
+                        iir.price = testItemData[index].price
+                        iir.purchaseDate = testItemData[index].purchaseDate
+                        iir.warrantyPeriod = testItemData[index].warrantyPeriod
+                        iir.reason = testItemData[index].reason
+                        iir.confort = testItemData[index].confort
+                        iir.otherTargets = testItemData[index].otherTargets
+                        iir.memo = testItemData[index].memo
+                    }
+                }
+            }
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
