@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import RealmSwift
 
 internal protocol Wireframe {
     func transition(to viewController: UIViewController)
+    func transition(to viewController: UIViewController, data: String)
 }
 
 internal struct RootViewWireframe: Wireframe {
@@ -35,5 +37,29 @@ internal struct RootViewWireframe: Wireframe {
             rootViewController.view.addSubview(viewController.view)
         }, completion: nil)
         viewController.didMove(toParent: viewController)
+    }
+    
+    func transition(to viewController: UIViewController, data: String) {
+        let realm = try! Realm()
+        let shareData = realm.objects(ShareInNavigation.self).first
+        
+        if(shareData == nil){
+            print("ShareInNavigationが空")
+            let sd = ShareInNavigation()
+            sd.data = data
+            try! realm.write {
+                realm.add(sd)
+            }
+        }else{
+            print("ShareInNavigationを更新")
+            try! realm.write {
+                shareData?.data = data
+            }
+        }
+        
+        // TODO: データ1個もなかったら作成するっていう分岐を用意する
+        
+        
+        transition(to: viewController)
     }
 }

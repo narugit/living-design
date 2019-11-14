@@ -53,10 +53,9 @@ class Home: UIViewController, UICollectionViewDataSource, UICollectionViewDelega
         
         if self.currentSelected != nil && self.currentSelected == indexPath.row
         {
-            print(names[indexPath.row])
             let nextStoryBoard = UIStoryboard(name: "Detail", bundle: nil)
             let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: "DetailViewControllerID")
-            self.wireframe.transition(to: nextViewController)
+            self.wireframe.transition(to: nextViewController, data: names[indexPath.row]) // ここにデータのidを詰める
         }
 
         return cell

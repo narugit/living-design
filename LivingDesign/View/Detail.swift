@@ -9,6 +9,7 @@
 import UIKit
 import Foundation
 import PDFKit
+import RealmSwift
 
 class Detail: UIViewController {
     
@@ -29,6 +30,13 @@ class Detail: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let realm = try! Realm()
+        let shareData = realm.objects(ShareInNavigation.self)
+        print(shareData)
+        
+        
+        
         name.text = "洗濯機"
         
         

@@ -8,6 +8,10 @@
 
 import RealmSwift
 
+class ShareInNavigation: Object{
+    @objc dynamic var data: String = ""
+}
+
 class Genre: Object{
     @objc dynamic var name: String = ""
 }
