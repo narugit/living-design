@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Footer" customModule="LivingDesign" customModuleProvider="target">
             <connections>
+                <outlet property="historyButton" destination="bte-0n-gXl" id="Zll-6v-b74"/>
+                <outlet property="homeButton" destination="Zs9-IL-xIR" id="APJ-Rt-6hl"/>
                 <outlet property="settingsButton" destination="Zs9-IL-xIR" id="GCd-It-2qM"/>
             </connections>
         </placeholder>
@@ -24,6 +26,9 @@
                         <constraint firstAttribute="width" secondItem="Zs9-IL-xIR" secondAttribute="height" multiplier="1:1" id="pAB-v3-WtT"/>
                     </constraints>
                     <state key="normal" title="Button" image="home"/>
+                    <connections>
+                        <action selector="touchUpInsideHomeButton:" destination="-1" eventType="touchUpInside" id="nJR-ie-mPI"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bte-0n-gXl">
                     <rect key="frame" x="187" y="44" width="40" height="40"/>
@@ -32,6 +37,9 @@
                         <constraint firstAttribute="width" secondItem="bte-0n-gXl" secondAttribute="height" multiplier="1:1" id="EMN-9R-ZpU"/>
                     </constraints>
                     <state key="normal" title="Button" image="history"/>
+                    <connections>
+                        <action selector="touchUpInsideHistoryButton:" destination="-1" eventType="touchUpInside" id="aiu-f5-dai"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cq2-TA-64Q">
                     <rect key="frame" x="344" y="44" width="40" height="40"/>
@@ -40,6 +48,9 @@
                         <constraint firstAttribute="width" secondItem="Cq2-TA-64Q" secondAttribute="height" multiplier="1:1" id="Pu0-Mh-GRm"/>
                     </constraints>
                     <state key="normal" title="Button" image="settings"/>
+                    <connections>
+                        <action selector="touchUpInsideSettingButton:" destination="-1" eventType="touchUpInside" id="zmT-on-Zux"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

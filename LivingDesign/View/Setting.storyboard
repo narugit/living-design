@@ -1,7 +1,48 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Setting-->
+        <scene sceneID="3lU-AK-vJG">
+            <objects>
+                <viewController storyboardIdentifier="SettingViewControllerID" id="qsZ-EV-9PS" customClass="Setting" customModule="LivingDesign" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iL2-xo-25k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="設定画面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpm-Kr-9As">
+                                <rect key="frame" x="172" y="437.5" width="70" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2q9-J8-vL7" customClass="Footer" customModule="LivingDesign" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="812" width="414" height="84"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="t0b-5c-XLj"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="2q9-J8-vL7" secondAttribute="bottom" id="Gyy-GP-Biz"/>
+                            <constraint firstItem="AeF-1Y-bHg" firstAttribute="trailing" secondItem="2q9-J8-vL7" secondAttribute="trailing" id="Ku2-Sz-m0m"/>
+                            <constraint firstItem="2q9-J8-vL7" firstAttribute="leading" secondItem="AeF-1Y-bHg" secondAttribute="leading" id="fXV-dh-JT4"/>
+                            <constraint firstItem="kpm-Kr-9As" firstAttribute="centerY" secondItem="iL2-xo-25k" secondAttribute="centerY" id="hpj-rc-gO9"/>
+                            <constraint firstItem="kpm-Kr-9As" firstAttribute="centerX" secondItem="iL2-xo-25k" secondAttribute="centerX" id="s5R-hO-CoT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="AeF-1Y-bHg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s9N-cM-WU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="12" y="4"/>
+        </scene>
+    </scenes>
 </document>

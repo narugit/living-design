@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -81,31 +81,58 @@
                                     <constraint firstAttribute="height" constant="84" id="8EJ-WW-i6s"/>
                                 </constraints>
                             </view>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zot-vM-Ylc">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jun-lT-2VW">
                                 <rect key="frame" x="0.0" y="44" width="414" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ab-BZ-9Qa">
+                                        <rect key="frame" x="354" y="7.5" width="40" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="W8V-fX-4sZ"/>
+                                        </constraints>
+                                        <state key="normal" title="削除"/>
+                                        <connections>
+                                            <action selector="touchUpInsideDeleteButton:" destination="qv8-ee-q9t" eventType="touchUpInside" id="mDQ-VS-rwL"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ホーム" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNR-3M-Ekp">
+                                        <rect key="frame" x="179" y="11.5" width="56" height="22"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c1k-aB-DW1">
+                                        <rect key="frame" x="294" y="7.5" width="40" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="fAp-QW-Lrx"/>
+                                        </constraints>
+                                        <state key="normal" title="追加"/>
+                                        <connections>
+                                            <action selector="touchUpInsideAddButton:" destination="qv8-ee-q9t" eventType="touchUpInside" id="YtW-Cc-yUK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97256201509999995" green="0.972525537" blue="0.9725503325" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="7o5-Ng-ZyZ"/>
+                                    <constraint firstAttribute="height" constant="45" id="Ee3-38-Wvd"/>
+                                    <constraint firstItem="fNR-3M-Ekp" firstAttribute="centerX" secondItem="jun-lT-2VW" secondAttribute="centerX" id="Hgb-JQ-de7"/>
+                                    <constraint firstItem="4ab-BZ-9Qa" firstAttribute="centerY" secondItem="jun-lT-2VW" secondAttribute="centerY" id="JX5-Ag-MHm"/>
+                                    <constraint firstItem="c1k-aB-DW1" firstAttribute="centerY" secondItem="jun-lT-2VW" secondAttribute="centerY" id="PtA-gb-wh2"/>
+                                    <constraint firstItem="4ab-BZ-9Qa" firstAttribute="leading" secondItem="c1k-aB-DW1" secondAttribute="trailing" constant="20" id="YXe-t1-3bQ"/>
+                                    <constraint firstItem="fNR-3M-Ekp" firstAttribute="centerY" secondItem="jun-lT-2VW" secondAttribute="centerY" id="qWq-j5-WMU"/>
+                                    <constraint firstAttribute="trailing" secondItem="4ab-BZ-9Qa" secondAttribute="trailing" constant="20" id="wRZ-h9-y1T"/>
                                 </constraints>
-                                <items>
-                                    <navigationItem title="ホーム" id="k6C-Tq-zgK">
-                                        <rightBarButtonItems>
-                                            <barButtonItem title="削除" id="92C-44-qxg"/>
-                                            <barButtonItem title="追加" id="Lbz-Xn-5nq"/>
-                                        </rightBarButtonItems>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="jun-lT-2VW" firstAttribute="leading" secondItem="EkR-Ua-mdL" secondAttribute="leading" id="03T-Wl-E0z"/>
                             <constraint firstItem="MwX-pN-rqw" firstAttribute="trailing" secondItem="EkR-Ua-mdL" secondAttribute="trailing" id="DsD-ey-uzX"/>
+                            <constraint firstItem="jun-lT-2VW" firstAttribute="top" secondItem="EkR-Ua-mdL" secondAttribute="top" id="GEa-yR-G9F"/>
                             <constraint firstItem="dRy-rv-gCG" firstAttribute="leading" secondItem="EkR-Ua-mdL" secondAttribute="leading" constant="20" id="Hy1-cm-m2P"/>
-                            <constraint firstItem="Zot-vM-Ylc" firstAttribute="top" secondItem="EkR-Ua-mdL" secondAttribute="top" id="bAc-jd-S9I"/>
+                            <constraint firstItem="EkR-Ua-mdL" firstAttribute="trailing" secondItem="jun-lT-2VW" secondAttribute="trailing" id="Wcx-tT-bW5"/>
                             <constraint firstItem="MwX-pN-rqw" firstAttribute="top" secondItem="krB-6x-gLi" secondAttribute="bottom" constant="10" id="hZY-19-Nrx"/>
                             <constraint firstAttribute="bottom" secondItem="MwX-pN-rqw" secondAttribute="bottom" id="hdS-nr-ZeE"/>
                             <constraint firstItem="EkR-Ua-mdL" firstAttribute="trailing" secondItem="dRy-rv-gCG" secondAttribute="trailing" constant="20" id="iS5-Yp-w5C"/>
-                            <constraint firstItem="Zot-vM-Ylc" firstAttribute="trailing" secondItem="EkR-Ua-mdL" secondAttribute="trailing" id="j3r-Gk-3yt"/>
-                            <constraint firstItem="Zot-vM-Ylc" firstAttribute="leading" secondItem="EkR-Ua-mdL" secondAttribute="leading" id="lKy-HC-jX7"/>
                             <constraint firstItem="EkR-Ua-mdL" firstAttribute="trailing" secondItem="krB-6x-gLi" secondAttribute="trailing" constant="20" id="mIN-so-6V5"/>
                             <constraint firstItem="krB-6x-gLi" firstAttribute="leading" secondItem="EkR-Ua-mdL" secondAttribute="leading" constant="20" id="tAW-Fi-Vh3"/>
                             <constraint firstItem="dRy-rv-gCG" firstAttribute="top" secondItem="EkR-Ua-mdL" secondAttribute="top" constant="55" id="xZK-jj-Hpv"/>
@@ -115,7 +142,9 @@
                         <viewLayoutGuide key="safeArea" id="EkR-Ua-mdL"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="c1k-aB-DW1" id="we8-nx-TAH"/>
                         <outlet property="collectionView" destination="krB-6x-gLi" id="OsD-l5-qgq"/>
+                        <outlet property="deleteButton" destination="4ab-BZ-9Qa" id="aAg-SM-la6"/>
                         <outlet property="titleLabel" destination="dRy-rv-gCG" id="4hJ-N0-bBd"/>
                     </connections>
                 </viewController>
