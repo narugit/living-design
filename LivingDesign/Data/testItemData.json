@@ -2,9 +2,7 @@
     {
         "id": "10000",
         "name": "洗濯機",
-        "genre": {
-            "name": "家電"
-        },
+        "genre": "家電",
         "modelNumber": "111111",
         "price": 20000,
         "purchaseDate": "2019/11/10",
@@ -14,14 +12,13 @@
         "confort": 4,
         "otherTargets": "特になし",
         "memo": "めっちゃ綺麗になる",
-        "isUse": true
+        "isUse": true,
+        "photo": "washing-machine"
     },
     {
         "id": "10001",
         "name": "テレビ",
-        "genre": {
-            "name": "家電"
-        },
+        "genre": "家電",
         "modelNumber": "22222",
         "price": 10000,
         "purchaseDate": "2019/08/10",
@@ -31,6 +28,39 @@
         "confort": 5,
         "otherTargets": "ブラビア",
         "memo": "画質きれい",
-        "isUse": true
+        "isUse": true,
+        "photo": "tv"
+    },
+    {
+        "id": "10002",
+        "name": "コピー機",
+        "genre": "家電",
+        "modelNumber": "dfsdf2",
+        "price": 10000,
+        "purchaseDate": "2019/04/10",
+        "warrantyPeriod": "2021/04/10",
+        "disposalDate": "2019/12/1",
+        "reason": "印刷がきれい",
+        "confort": 5,
+        "otherTargets": "特になし",
+        "memo": "速い",
+        "isUse": true,
+        "photo": "copier"
+    },
+    {
+        "id": "10003",
+        "name": "オーブン",
+        "genre": "家電",
+        "modelNumber": "22ddfs2",
+        "price": 10000,
+        "purchaseDate": "2019/02/10",
+        "warrantyPeriod": "2021/02/10",
+        "disposalDate": "2022/12/10",
+        "reason": "特になし",
+        "confort": 3,
+        "otherTargets": "特になし",
+        "memo": "電力めっちゃ使う",
+        "isUse": true,
+        "photo": "oven"
     }
 ]
