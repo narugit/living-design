@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let config = Realm.Configuration(
             // データ構造変更するたびに更新する必要あり。前よりも大きな値にする
-            schemaVersion: 5,
+            schemaVersion: 8,
             
             //スキーマのバージョンが上記のものよりも低いものを開こうとした場合、自動的に呼び出されるブロックを設定する
             migrationBlock: { migration, oldSchemaVersion in
@@ -69,19 +69,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let data = getFileData(path!)
             let testGenreData = try! JSONDecoder().decode(Genre.self, from: data!) as! Genre
 
-            if(genreInRealm == nil){
-                print("genreは空")
-                let genre = Genre()
-                genre.name = testGenreData.name
-                try! realm.write{
-                    realm.add(genre)
+            if(genreInRealm != nil){
+                try! realm.write {
+                    realm.delete(genreInRealm!)
                 }
+                print("genreを削除")
             } else{
-                print("genreをjsonデータに更新")
-                try! realm.write{
-                    genreInRealm?.name = testGenreData.name
-                }
+                print("genreは空")
             }
+                
+            let genre = Genre()
+            genre.name = testGenreData.name
+            try! realm.write{
+                realm.add(genre)
+            }
+            print("genreを追加")
         }
         
         do {
@@ -90,41 +92,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let data = getFileData(path!)
             let testItemData = try! JSONDecoder().decode([Item].self, from: data!) as! [Item]
             
-            if(itemInRealm == nil){
-                print("itemは空")
-                for tid in testItemData{
-                    let item = Item()
-                    item.name = tid.name
-                    item.setGenre(genre: tid.getGenre())
-                    item.modelNumber = tid.modelNumber
-                    item.price = tid.price
-                    item.purchaseDate = tid.purchaseDate
-                    item.warrantyPeriod = tid.warrantyPeriod
-                    item.reason = tid.reason
-                    item.confort = tid.confort
-                    item.otherTargets = tid.otherTargets
-                    item.memo = tid.memo
-                    try! realm.write{
-                        realm.add(item)
+            if(itemInRealm != nil){
+                for iir in itemInRealm{
+                    try! realm.write {
+                        realm.delete(iir)
                     }
                 }
+                print("itemを削除")
             } else{
-                print("itemをjsonデータに更新")
-                for (index, iir) in itemInRealm.enumerated(){
-                    try! realm.write{
-                        iir.name = testItemData[index].name
-                        iir.setGenre(genre: testItemData[index].getGenre())
-                        iir.modelNumber = testItemData[index].modelNumber
-                        iir.price = testItemData[index].price
-                        iir.purchaseDate = testItemData[index].purchaseDate
-                        iir.warrantyPeriod = testItemData[index].warrantyPeriod
-                        iir.reason = testItemData[index].reason
-                        iir.confort = testItemData[index].confort
-                        iir.otherTargets = testItemData[index].otherTargets
-                        iir.memo = testItemData[index].memo
-                    }
+                print("itemは空")
+            }
+                
+            for tid in testItemData{
+                let item = Item()
+                item.name = tid.name
+                item.genre = tid.genre
+                item.modelNumber = tid.modelNumber
+                item.price = tid.price
+                item.purchaseDate = tid.purchaseDate
+                item.warrantyPeriod = tid.warrantyPeriod
+                item.reason = tid.reason
+                item.confort = tid.confort
+                item.otherTargets = tid.otherTargets
+                item.memo = tid.memo
+                item.photo = tid.photo
+                try! realm.write{
+                    realm.add(item)
                 }
             }
+            print("itemを追加")
         }
     }
 

@@ -19,7 +19,7 @@ class Genre: Object, Decodable{
 class Item: Object, Decodable{
     @objc private dynamic var id: String = NSUUID().uuidString
     @objc dynamic var name: String = ""
-    private var genre = Genre()
+    @objc dynamic var genre: String = ""
     @objc dynamic var modelNumber: String = ""
     @objc dynamic var price: Int = 0
     @objc dynamic var purchaseDate: String = ""  // YYYY/MM/DD形式 0埋めする
@@ -30,6 +30,7 @@ class Item: Object, Decodable{
     @objc dynamic var otherTargets: String = ""
     @objc dynamic var memo: String = ""
     @objc private dynamic var isUse: Bool = true
+    @objc dynamic var photo: String = ""
     
     @objc override static func primaryKey() -> String? {
         return "id"
@@ -37,14 +38,6 @@ class Item: Object, Decodable{
     
     @objc public func getId() -> String {
         return self.id
-    }
-    
-    @objc public func getGenre() -> Genre {
-        return self.genre
-    }
-    
-    @objc public func setGenre(genre: Genre) -> Void {
-        self.genre = genre
     }
     
     @objc public func setDisposalDate(disposalDate: String) -> Void {

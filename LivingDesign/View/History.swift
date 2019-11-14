@@ -8,14 +8,11 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 class History: UIViewController, UITableViewDataSource, UITableViewDelegate{
-    private let photos = ["washing-machine", "copier", "oven", "tv" ]
-    private let genres = ["家電", "家電", "家電", "家電"]
-    private let names = ["洗濯機", "コピー機", "オーブン", "テレビ"]
-    private let isUsings = [true, false, false, true]
     @IBOutlet weak var tableView: UITableView!
-    
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,19 +20,24 @@ class History: UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.photos.count
+        return self.realm.objects(Item.self).count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let itemInRealm = self.realm.objects(Item.self)
         let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath) as! HistoryTabelViewCell
         
-        var genre = genres[indexPath.row]
+        var genre = itemInRealm[indexPath.row].genre
         
         if(indexPath.row > 0){
-            genre = genres[indexPath.row] == genres[indexPath.row-1] ? "" : genre
+            genre = itemInRealm[indexPath.row].genre == itemInRealm[indexPath.row-1].genre ? "" : genre
         }
-        
-        cell.setCell(indexPath: indexPath, photoName: photos[indexPath.row], name: names[indexPath.row], date: "2019/11/1", isUsing: isUsings[indexPath.row], genre: genre)
+        // 以下、inUse書き込めているかテスト
+        // 値の書き換えはrealm.write内でやらないと例外走るようになっている
+        // try! realm.write {
+        // itemInRealm[indexPath.row].setDisposalDate(disposalDate: "hoge")
+        // }
+        cell.setCell(indexPath: indexPath, photoName: itemInRealm[indexPath.row].photo, name: itemInRealm[indexPath.row].name, date: itemInRealm[indexPath.row].purchaseDate, isUsing: itemInRealm[indexPath.row].getIsUse(), genre: genre)
         
         return cell
     }

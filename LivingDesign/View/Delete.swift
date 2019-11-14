@@ -8,14 +8,12 @@
 
 import Foundation
 import UIKit
+import RealmSwift
 
 class Delete: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
-    private let photos = ["washing-machine", "copier", "oven", "tv" ]
-    private let names = ["洗濯機", "コピー機", "オーブン", "テレビ"]
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,20 +30,21 @@ class Delete: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+        let itemInRealm = self.realm.objects(Item.self)
         
         let cell: UICollectionViewCell =
             collectionView.dequeueReusableCell(withReuseIdentifier: "DeleteCell",
                                                for: indexPath)
 
         let imageView = cell.contentView.viewWithTag(1) as! UIImageView
-        let cellImage = UIImage(named: photos[indexPath.row])
+        let cellImage = UIImage(named: itemInRealm[indexPath.row].photo)
         imageView.frame = CGRect(x: 0, y: 0, width: 100, height: 100)
         imageView.image = cellImage
         // imageViewのサイズ確認用
         // imageView.backgroundColor = .blue
 
         let label = cell.contentView.viewWithTag(2) as! UILabel
-        label.text = names[indexPath.row]
+        label.text = itemInRealm[indexPath.row].name
         // セルのサイズ確認用
         // cell.backgroundColor = .red
         
@@ -59,7 +58,7 @@ class Delete: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView,
                         numberOfItemsInSection section: Int) -> Int {
         // 要素数を格納
-        return self.photos.count;
+        return self.realm.objects(Item.self).count
     }
     
     override func didReceiveMemoryWarning() {
