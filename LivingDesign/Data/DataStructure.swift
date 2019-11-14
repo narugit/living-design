@@ -12,11 +12,11 @@ class ShareInNavigation: Object{
     @objc dynamic var data: String = ""
 }
 
-class Genre: Object{
+class Genre: Object, Decodable{
     @objc dynamic var name: String = ""
 }
 
-class Item: Object{
+class Item: Object, Decodable{
     @objc private dynamic var id: String = NSUUID().uuidString
     @objc dynamic var name: String = ""
     private var genre = Genre()
