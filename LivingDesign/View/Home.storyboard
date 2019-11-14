@@ -90,6 +90,9 @@
                                             <constraint firstAttribute="width" constant="40" id="W8V-fX-4sZ"/>
                                         </constraints>
                                         <state key="normal" title="削除"/>
+                                        <connections>
+                                            <action selector="touchUpInsideDeleteButton:" destination="qv8-ee-q9t" eventType="touchUpInside" id="mDQ-VS-rwL"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ホーム" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fNR-3M-Ekp">
                                         <rect key="frame" x="179" y="11.5" width="56" height="22"/>
@@ -103,9 +106,12 @@
                                             <constraint firstAttribute="width" constant="40" id="fAp-QW-Lrx"/>
                                         </constraints>
                                         <state key="normal" title="追加"/>
+                                        <connections>
+                                            <action selector="touchUpInsideAddButton:" destination="qv8-ee-q9t" eventType="touchUpInside" id="YtW-Cc-yUK"/>
+                                        </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.92474671803652952" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.97256201509999995" green="0.972525537" blue="0.9725503325" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="Ee3-38-Wvd"/>
                                     <constraint firstItem="fNR-3M-Ekp" firstAttribute="centerX" secondItem="jun-lT-2VW" secondAttribute="centerX" id="Hgb-JQ-de7"/>
@@ -136,7 +142,9 @@
                         <viewLayoutGuide key="safeArea" id="EkR-Ua-mdL"/>
                     </view>
                     <connections>
+                        <outlet property="addButton" destination="c1k-aB-DW1" id="we8-nx-TAH"/>
                         <outlet property="collectionView" destination="krB-6x-gLi" id="OsD-l5-qgq"/>
+                        <outlet property="deleteButton" destination="4ab-BZ-9Qa" id="aAg-SM-la6"/>
                         <outlet property="titleLabel" destination="dRy-rv-gCG" id="4hJ-N0-bBd"/>
                     </connections>
                 </viewController>

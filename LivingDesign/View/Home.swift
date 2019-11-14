@@ -14,6 +14,9 @@ class Home: UIViewController, UICollectionViewDataSource, UICollectionViewDelega
     private let names = ["洗濯機ほげほげ", "コピー機", "オーブン", "テレビ"]
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
+    
     var currentSelected : Int?
     private let wireframe: RootViewWireframe = RootViewWireframe()
     
@@ -80,6 +83,18 @@ class Home: UIViewController, UICollectionViewDataSource, UICollectionViewDelega
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    @IBAction func touchUpInsideAddButton(_ sender: Any) {
+        let nextStoryBoard = UIStoryboard(name: "NewProduct", bundle: nil)
+        let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: "NewProductViewControllerID")
+        self.wireframe.transition(to: nextViewController)
+    }
+    
+    @IBAction func touchUpInsideDeleteButton(_ sender: Any) {
+        let nextStoryBoard = UIStoryboard(name: "Delete", bundle: nil)
+        let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: "DeleteViewControllerID")
+        self.wireframe.transition(to: nextViewController)
     }
     
 }
