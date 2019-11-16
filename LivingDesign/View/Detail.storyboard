@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dQA-Ua-WLk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dQA-Ua-WLk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -320,25 +320,16 @@
                         <viewLayoutGuide key="safeArea" id="7Sv-iX-teP"/>
                     </view>
                     <connections>
-                        <outlet property="assessment" destination="BQ8-ID-mlz" id="YIG-XL-CR7"/>
-                        <outlet property="buyreason" destination="ErR-hz-ajf" id="XJ7-iG-au0"/>
-                        <outlet property="candidate" destination="xaX-Hl-ba6" id="EpD-Ch-I68"/>
-                        <outlet property="category" destination="jBJ-0R-pMu" id="Xe0-0h-XNf"/>
                         <outlet property="comfort" destination="BQ8-ID-mlz" id="Fy5-8q-McT"/>
-                        <outlet property="date" destination="6Zq-tc-RKk" id="HW4-Ot-itT"/>
                         <outlet property="genre" destination="jBJ-0R-pMu" id="7fw-ls-J7n"/>
-                        <outlet property="memo" destination="oBY-bt-vok" id="oTN-H6-Rrw"/>
-                        <outlet property="model" destination="M7V-aN-yuJ" id="uWW-65-3LX"/>
                         <outlet property="modelNumber" destination="M7V-aN-yuJ" id="FUr-9k-LID"/>
                         <outlet property="name" destination="kzl-xa-f04" id="psl-Kn-GY6"/>
                         <outlet property="otherTargets" destination="xaX-Hl-ba6" id="ZYu-bB-KBG"/>
                         <outlet property="photo" destination="fnf-3y-r1W" id="szV-g5-flh"/>
                         <outlet property="price" destination="Ncw-VS-SRW" id="Z4m-u0-Ft7"/>
-                        <outlet property="productImage" destination="fnf-3y-r1W" id="7p8-Vr-tR6"/>
                         <outlet property="purchaseDate" destination="6Zq-tc-RKk" id="MIL-6i-xow"/>
                         <outlet property="reason" destination="ErR-hz-ajf" id="1yh-4b-RjV"/>
                         <outlet property="warrantyPeriod" destination="Erm-sy-9O5" id="h1t-Yy-7QK"/>
-                        <outlet property="warrantyPeriond" destination="Erm-sy-9O5" id="h3X-aV-SRJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DOu-0G-U6y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
