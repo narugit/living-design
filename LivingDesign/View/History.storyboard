@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IgY-AR-ZAm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IgY-AR-ZAm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -96,16 +96,6 @@
                                     <outlet property="delegate" destination="IgY-AR-ZAm" id="IAK-4u-vcj"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="履歴一覧" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYu-tq-0W7">
-                                <rect key="frame" x="158.5" y="44" width="97.5" height="29"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="Fnr-iL-dve"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tya-Qe-4FL" customClass="Footer" customModule="LivingDesign" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="812" width="414" height="84"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -113,30 +103,40 @@
                                     <constraint firstAttribute="height" constant="84" id="CvR-Kz-1UI"/>
                                 </constraints>
                             </view>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z8r-gj-sWR">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ot5-Sx-4RY">
                                 <rect key="frame" x="0.0" y="44" width="414" height="45"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="履歴" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6FS-8W-wUY">
+                                        <rect key="frame" x="188.5" y="11.5" width="37" height="22"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGX-XC-b0w">
+                                        <rect key="frame" x="364" y="7.5" width="30" height="30"/>
+                                        <state key="normal" title="↑↓"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.97254901960784312" green="0.972525537" blue="0.9725503325" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="mBj-hL-C12"/>
+                                    <constraint firstAttribute="trailing" secondItem="eGX-XC-b0w" secondAttribute="trailing" constant="20" id="7Ia-UG-JhC"/>
+                                    <constraint firstItem="6FS-8W-wUY" firstAttribute="centerX" secondItem="ot5-Sx-4RY" secondAttribute="centerX" id="Ahx-CV-eFH"/>
+                                    <constraint firstItem="6FS-8W-wUY" firstAttribute="centerY" secondItem="ot5-Sx-4RY" secondAttribute="centerY" id="Gky-OD-Ypg"/>
+                                    <constraint firstAttribute="height" constant="45" id="Onp-nv-9pP"/>
+                                    <constraint firstItem="eGX-XC-b0w" firstAttribute="centerY" secondItem="ot5-Sx-4RY" secondAttribute="centerY" id="kgW-R9-wNQ"/>
                                 </constraints>
-                                <items>
-                                    <navigationItem title="履歴" id="H5s-OP-04r">
-                                        <barButtonItem key="rightBarButtonItem" title="↑↓" id="8Kr-vq-WfQ"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="VHO-ZL-7vO" firstAttribute="trailing" secondItem="ot5-Sx-4RY" secondAttribute="trailing" id="Cbj-ac-BuW"/>
                             <constraint firstItem="tya-Qe-4FL" firstAttribute="top" secondItem="c4S-0A-7ut" secondAttribute="bottom" constant="10" id="El5-tV-4gq"/>
                             <constraint firstItem="c4S-0A-7ut" firstAttribute="top" secondItem="VHO-ZL-7vO" secondAttribute="top" constant="55" id="ITv-oe-raY"/>
-                            <constraint firstItem="z8r-gj-sWR" firstAttribute="top" secondItem="VHO-ZL-7vO" secondAttribute="top" id="QAj-GZ-7yC"/>
                             <constraint firstItem="VHO-ZL-7vO" firstAttribute="trailing" secondItem="tya-Qe-4FL" secondAttribute="trailing" id="Wsk-Xd-s04"/>
                             <constraint firstAttribute="bottom" secondItem="tya-Qe-4FL" secondAttribute="bottom" id="aD2-PD-4I9"/>
-                            <constraint firstItem="xYu-tq-0W7" firstAttribute="centerX" secondItem="giy-g4-a3U" secondAttribute="centerX" id="cY7-NL-blT"/>
-                            <constraint firstItem="z8r-gj-sWR" firstAttribute="leading" secondItem="VHO-ZL-7vO" secondAttribute="leading" id="cck-jO-Lur"/>
+                            <constraint firstItem="ot5-Sx-4RY" firstAttribute="top" secondItem="VHO-ZL-7vO" secondAttribute="top" id="arE-ZY-TFN"/>
+                            <constraint firstItem="ot5-Sx-4RY" firstAttribute="leading" secondItem="VHO-ZL-7vO" secondAttribute="leading" id="dF4-Mx-VAl"/>
                             <constraint firstItem="VHO-ZL-7vO" firstAttribute="trailing" secondItem="c4S-0A-7ut" secondAttribute="trailing" constant="20" id="dhI-7I-T4n"/>
-                            <constraint firstItem="z8r-gj-sWR" firstAttribute="trailing" secondItem="VHO-ZL-7vO" secondAttribute="trailing" id="lsh-T5-3Ak"/>
-                            <constraint firstItem="xYu-tq-0W7" firstAttribute="top" secondItem="VHO-ZL-7vO" secondAttribute="top" id="o09-Xp-WCB"/>
                             <constraint firstItem="tya-Qe-4FL" firstAttribute="leading" secondItem="VHO-ZL-7vO" secondAttribute="leading" id="pTn-ka-lkt"/>
                             <constraint firstItem="c4S-0A-7ut" firstAttribute="leading" secondItem="VHO-ZL-7vO" secondAttribute="leading" constant="20" id="ssY-nP-NUP"/>
                         </constraints>
