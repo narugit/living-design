@@ -11,6 +11,7 @@ import UIKit
  
 class DeleteCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var titleLabel: UILabelWithID!
     
     // ボタン内で指を離した際の処理
     @IBAction func touchUpInside(_ sender: Any) {

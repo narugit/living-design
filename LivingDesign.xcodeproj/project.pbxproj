@@ -31,6 +31,7 @@
 		439256AA2354A57300387FD3 /* Footer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439256A92354A57300387FD3 /* Footer.swift */; };
 		43963391237A63B800B26BDF /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43963390237A63B800B26BDF /* Setting.swift */; };
 		43A1C8BA236518A1007E5BC2 /* RealmUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A1C8B9236518A0007E5BC2 /* RealmUtility.swift */; };
+		43A3B9E4238C068000EBEBC0 /* UILabelWithID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43A3B9E3238C068000EBEBC0 /* UILabelWithID.swift */; };
 		43A3CED3235EE0650009E965 /* washing-machine.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 43A3CEC5235EE0650009E965 /* washing-machine.pdf */; };
 		43A3CEDF235EF6110009E965 /* electric-kettle.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 43A3CEDD235EF6110009E965 /* electric-kettle.pdf */; };
 		43A3CEE0235EF6110009E965 /* copier.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 43A3CEDE235EF6110009E965 /* copier.pdf */; };
@@ -111,6 +112,7 @@
 		439256A92354A57300387FD3 /* Footer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Footer.swift; sourceTree = "<group>"; };
 		43963390237A63B800B26BDF /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
 		43A1C8B9236518A0007E5BC2 /* RealmUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUtility.swift; sourceTree = "<group>"; };
+		43A3B9E3238C068000EBEBC0 /* UILabelWithID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelWithID.swift; sourceTree = "<group>"; };
 		43A3CEC5235EE0650009E965 /* washing-machine.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "washing-machine.pdf"; sourceTree = "<group>"; };
 		43A3CEDD235EF6110009E965 /* electric-kettle.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "electric-kettle.pdf"; sourceTree = "<group>"; };
 		43A3CEDE235EF6110009E965 /* copier.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = copier.pdf; sourceTree = "<group>"; };
@@ -273,6 +275,7 @@
 				4390DD15235E8CBF009E3C6F /* RootViewController.swift */,
 				4390DD19235E8F7C009E3C6F /* RootScreen.storyboard */,
 				43C37065236D6BBD0033BDCD /* test.storyboard */,
+				43A3B9E3238C068000EBEBC0 /* UILabelWithID.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				43CB4957236D052900FB2C6B /* HistoryTableViewCell.swift in Sources */,
 				43A1C8BA236518A1007E5BC2 /* RealmUtility.swift in Sources */,
 				4390DD16235E8CBF009E3C6F /* RootViewController.swift in Sources */,
+				43A3B9E4238C068000EBEBC0 /* UILabelWithID.swift in Sources */,
 				43963391237A63B800B26BDF /* Setting.swift in Sources */,
 				43F8B941235E885D000E084E /* Home.swift in Sources */,
 				436874752361E941001109AF /* DataStructure.swift in Sources */,

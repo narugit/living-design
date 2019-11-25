@@ -43,8 +43,9 @@ class Delete: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         // imageViewのサイズ確認用
         // imageView.backgroundColor = .blue
 
-        let label = cell.contentView.viewWithTag(2) as! UILabel
+        let label = cell.contentView.viewWithTag(2) as! UILabelWithID
         label.text = itemInRealm[indexPath.row].name
+        label.id = itemInRealm[indexPath.row].getId()
         // セルのサイズ確認用
         // cell.backgroundColor = .red
         

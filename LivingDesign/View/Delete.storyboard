@@ -42,7 +42,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="131" height="164"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLM-zI-5wE">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLM-zI-5wE" customClass="UILabelWithID" customModule="LivingDesign" customModuleProvider="target">
                                                     <rect key="frame" x="48" y="118" width="35.5" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="04p-OF-Ise"/>
@@ -95,6 +95,7 @@
                                         <size key="customSize" width="131" height="164"/>
                                         <connections>
                                             <outlet property="deleteButton" destination="mCD-3g-Bex" id="nX5-eg-Gyj"/>
+                                            <outlet property="titleLabel" destination="HLM-zI-5wE" id="Kz5-bk-nmD"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
