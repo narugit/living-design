@@ -8,6 +8,10 @@
 
 import RealmSwift
 
+class DeleteCandidateItem: Object{
+    @objc dynamic var id: String = ""
+}
+
 class ShareInNavigation: Object{
     @objc dynamic var data: String = ""
 }

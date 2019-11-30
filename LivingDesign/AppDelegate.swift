@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let config = Realm.Configuration(
             // データ構造変更するたびに更新する必要あり。前よりも大きな値にする
-            schemaVersion: 8,
+            schemaVersion: 9,
             
             //スキーマのバージョンが上記のものよりも低いものを開こうとした場合、自動的に呼び出されるブロックを設定する
             migrationBlock: { migration, oldSchemaVersion in
@@ -44,6 +44,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // jsonのデータにリセットしたい場合に使用
         // そうでない場合は、下の行をコメントする
         loadTestData()
+        
+        // DeleteCandidateが存在するなら、削除しちゃう
+        let deleteCandidateItemInRealm = realm.objects(DeleteCandidateItem.self)
+        
+        if(deleteCandidateItemInRealm.first != nil){
+            for dci in deleteCandidateItemInRealm{
+                try! realm.write {
+                    realm.delete(dci)
+                }
+            }
+            print("deleteCandidateItemを削除")
+        } else{
+            print("deleteCandidateItemは空")
+        }
         
         return true
     }

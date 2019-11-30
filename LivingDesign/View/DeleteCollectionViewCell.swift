@@ -8,7 +8,8 @@
 
 import Foundation
 import UIKit
- 
+import RealmSwift
+
 class DeleteCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var titleLabel: UILabelWithID!
@@ -16,6 +17,15 @@ class DeleteCollectionViewCell: UICollectionViewCell {
     // ボタン内で指を離した際の処理
     @IBAction func touchUpInside(_ sender: Any) {
         deleteButton.backgroundColor = UIColor.init(red: 193/255, green: 24/255, blue: 84/255, alpha: 100/100)
+        let deleteCandidateItem = DeleteCandidateItem()
+        deleteCandidateItem.id = titleLabel.id
+        
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(deleteCandidateItem)
+        }
+        
+        self.backgroundColor = .red
     }
     
     // ボタン外で指を離した際の処理
@@ -27,6 +37,4 @@ class DeleteCollectionViewCell: UICollectionViewCell {
     @IBAction func touchDown(_ sender: Any) {
         deleteButton.backgroundColor = UIColor.init(red: 255/255, green: 208/255, blue: 226/255, alpha: 100/100)
     }
-    
-
 }
