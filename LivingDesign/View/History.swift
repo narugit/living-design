@@ -20,11 +20,11 @@ class History: UIViewController, UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.realm.objects(Item.self).count
+        return self.realm.objects(AllItem.self).count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let itemInRealm = self.realm.objects(Item.self)
+        let itemInRealm = self.realm.objects(AllItem.self)
         let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath) as! HistoryTabelViewCell
         
         var genre = itemInRealm[indexPath.row].genre

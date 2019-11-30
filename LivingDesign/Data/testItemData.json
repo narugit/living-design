@@ -7,12 +7,10 @@
         "price": 20000,
         "purchaseDate": "2019/11/10",
         "warrantyPeriod": "2021/11/10",
-        "disposalDate": "2019/12/10",
         "reason": "洗いやすい",
         "confort": 4,
         "otherTargets": "特になし",
         "memo": "めっちゃ綺麗になる",
-        "isUse": true,
         "photo": "washing-machine"
     },
     {
@@ -23,12 +21,10 @@
         "price": 10000,
         "purchaseDate": "2019/08/10",
         "warrantyPeriod": "2021/08/10",
-        "disposalDate": "2019/10/10",
         "reason": "4K",
         "confort": 5,
         "otherTargets": "ブラビア",
         "memo": "画質きれい",
-        "isUse": true,
         "photo": "tv"
     },
     {
@@ -39,12 +35,10 @@
         "price": 10000,
         "purchaseDate": "2019/04/10",
         "warrantyPeriod": "2021/04/10",
-        "disposalDate": "2019/12/1",
         "reason": "印刷がきれい",
         "confort": 5,
         "otherTargets": "特になし",
         "memo": "速い",
-        "isUse": true,
         "photo": "copier"
     },
     {
@@ -55,12 +49,10 @@
         "price": 10000,
         "purchaseDate": "2019/02/10",
         "warrantyPeriod": "2021/02/10",
-        "disposalDate": "2022/12/10",
         "reason": "特になし",
         "confort": 3,
         "otherTargets": "特になし",
         "memo": "電力めっちゃ使う",
-        "isUse": true,
         "photo": "oven"
     }
 ]

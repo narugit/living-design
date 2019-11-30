@@ -13,12 +13,13 @@ import RealmSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    private let resetController: ResetController = ResetController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         let config = Realm.Configuration(
             // データ構造変更するたびに更新する必要あり。前よりも大きな値にする
-            schemaVersion: 8,
+            schemaVersion: 12,
             
             //スキーマのバージョンが上記のものよりも低いものを開こうとした場合、自動的に呼び出されるブロックを設定する
             migrationBlock: { migration, oldSchemaVersion in
@@ -44,6 +45,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // jsonのデータにリセットしたい場合に使用
         // そうでない場合は、下の行をコメントする
         loadTestData()
+        
+        // DeleteCandidateが存在するなら、削除しちゃう
+        self.resetController.reset()
         
         return true
     }
@@ -88,6 +92,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         do {
             let itemInRealm = realm.objects(Item.self)
+            let allItemInRealm = realm.objects(AllItem.self)
             let path = Bundle.main.path(forResource: "testItemData", ofType:"json")
             let data = getFileData(path!)
             let testItemData = try! JSONDecoder().decode([Item].self, from: data!) as! [Item]
@@ -102,22 +107,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             } else{
                 print("itemは空")
             }
+            
+            if(allItemInRealm != nil){
+                for aiir in allItemInRealm{
+                    try! realm.write {
+                        realm.delete(aiir)
+                    }
+                }
+                print("allItemを削除")
+            } else{
+                print("allItemは空")
+            }
                 
             for tid in testItemData{
                 let item = Item()
-                item.name = tid.name
-                item.genre = tid.genre
-                item.modelNumber = tid.modelNumber
-                item.price = tid.price
-                item.purchaseDate = tid.purchaseDate
-                item.warrantyPeriod = tid.warrantyPeriod
-                item.reason = tid.reason
-                item.confort = tid.confort
-                item.otherTargets = tid.otherTargets
-                item.memo = tid.memo
-                item.photo = tid.photo
+                let allItem = AllItem()
+                allItem.setId(id: item.getId())
+                (allItem.name, item.name) = (tid.name, tid.name)
+                (allItem.genre, item.genre) = (tid.genre, tid.genre)
+                (allItem.modelNumber, item.modelNumber) = (tid.modelNumber, tid.modelNumber)
+                (allItem.price, item.price) = (tid.price, tid.price)
+                (allItem.purchaseDate, item.purchaseDate) = (tid.purchaseDate, tid.purchaseDate)
+                (allItem.warrantyPeriod, item.warrantyPeriod) = (tid.warrantyPeriod, tid.warrantyPeriod)
+                (allItem.reason, item.reason) = (tid.reason, tid.reason)
+                (allItem.confort, item.confort) = (tid.confort, tid.confort)
+                (allItem.otherTargets, item.otherTargets) = (tid.otherTargets, tid.otherTargets)
+                (allItem.memo, item.memo) = (tid.memo, tid.memo)
+                (allItem.photo, item.photo) = (tid.photo, tid.photo)
+                
                 try! realm.write{
                     realm.add(item)
+                    realm.add(allItem)
                 }
             }
             print("itemを追加")

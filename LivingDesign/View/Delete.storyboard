@@ -42,7 +42,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="131" height="164"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLM-zI-5wE">
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HLM-zI-5wE" customClass="UILabelWithID" customModule="LivingDesign" customModuleProvider="target">
                                                     <rect key="frame" x="48" y="118" width="35.5" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="04p-OF-Ise"/>
@@ -95,6 +95,7 @@
                                         <size key="customSize" width="131" height="164"/>
                                         <connections>
                                             <outlet property="deleteButton" destination="mCD-3g-Bex" id="nX5-eg-Gyj"/>
+                                            <outlet property="titleLabel" destination="HLM-zI-5wE" id="Kz5-bk-nmD"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -125,6 +126,9 @@
                                             <constraint firstAttribute="width" constant="40" id="GPs-hz-LvI"/>
                                         </constraints>
                                         <state key="normal" title="完了"/>
+                                        <connections>
+                                            <action selector="touchUpInsideCompleteButton:" destination="DPn-2P-vHz" eventType="touchUpInside" id="teH-lY-AkF"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jt-uS-m96">
                                         <rect key="frame" x="20" y="7.5" width="80" height="30"/>
@@ -132,6 +136,9 @@
                                             <constraint firstAttribute="width" constant="80" id="Hzh-kU-Ddi"/>
                                         </constraints>
                                         <state key="normal" title="取り消し"/>
+                                        <connections>
+                                            <action selector="touchUpInsideCancelButton:" destination="DPn-2P-vHz" eventType="touchUpInside" id="FZb-Kl-vZH"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97256201509999995" green="0.972525537" blue="0.9725503325" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
