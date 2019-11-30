@@ -28,6 +28,29 @@ class Item: Object, Decodable{
     @objc dynamic var price: Int = 0
     @objc dynamic var purchaseDate: String = ""  // YYYY/MM/DD形式 0埋めする
     @objc dynamic var warrantyPeriod: String = "" // YYYY/MM/DD形式 0埋めする
+    @objc dynamic var reason: String = ""
+    @objc dynamic var confort: Int = 3
+    @objc dynamic var otherTargets: String = ""
+    @objc dynamic var memo: String = ""
+    @objc dynamic var photo: String = ""
+    
+    @objc override static func primaryKey() -> String? {
+        return "id"
+    }
+    
+    @objc public func getId() -> String {
+        return self.id
+    }
+}
+
+class AllItem: Object, Decodable{
+    @objc private dynamic var id: String = ""
+    @objc dynamic var name: String = ""
+    @objc dynamic var genre: String = ""
+    @objc dynamic var modelNumber: String = ""
+    @objc dynamic var price: Int = 0
+    @objc dynamic var purchaseDate: String = ""  // YYYY/MM/DD形式 0埋めする
+    @objc dynamic var warrantyPeriod: String = "" // YYYY/MM/DD形式 0埋めする
     @objc private dynamic var disposalDate: String = "" // YYYY/MM/DD形式 0埋めする
     @objc dynamic var reason: String = ""
     @objc dynamic var confort: Int = 3
@@ -38,6 +61,10 @@ class Item: Object, Decodable{
     
     @objc override static func primaryKey() -> String? {
         return "id"
+    }
+    
+    @objc public func setId(id: String) -> Void {
+        self.id = id
     }
     
     @objc public func getId() -> String {

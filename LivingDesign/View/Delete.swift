@@ -77,6 +77,7 @@ class Delete: UIViewController, UICollectionViewDataSource, UICollectionViewDele
         for dci in deleteCandidateItems{
             try! realm.write {
                 realm.delete(realm.objects(Item.self).filter("id == %@",dci.id).first!)
+                realm.objects(AllItem.self).filter("id == %@",dci.id).first?.setDisposalDate(disposalDate: "2019/12/01")
             }
         }
         
