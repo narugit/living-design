@@ -13,12 +13,13 @@ import RealmSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    private let resetController: ResetController = ResetController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
         let config = Realm.Configuration(
             // データ構造変更するたびに更新する必要あり。前よりも大きな値にする
-            schemaVersion: 9,
+            schemaVersion: 11,
             
             //スキーマのバージョンが上記のものよりも低いものを開こうとした場合、自動的に呼び出されるブロックを設定する
             migrationBlock: { migration, oldSchemaVersion in
@@ -46,18 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         loadTestData()
         
         // DeleteCandidateが存在するなら、削除しちゃう
-        let deleteCandidateItemInRealm = realm.objects(DeleteCandidateItem.self)
-        
-        if(deleteCandidateItemInRealm.first != nil){
-            for dci in deleteCandidateItemInRealm{
-                try! realm.write {
-                    realm.delete(dci)
-                }
-            }
-            print("deleteCandidateItemを削除")
-        } else{
-            print("deleteCandidateItemは空")
-        }
+        self.resetController.reset()
         
         return true
     }

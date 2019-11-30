@@ -13,7 +13,7 @@ class Footer: UIView {
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var historyButton: UIButton!
     @IBOutlet weak var settingsButton: UIButton!
-    let realm = try! Realm()
+    private let resetController: ResetController = ResetController()
     
     private let wireframe: RootViewWireframe = RootViewWireframe()
     
@@ -36,15 +36,7 @@ class Footer: UIView {
     }
     
     @IBAction func touchUpInsideHistoryButton(_ sender: Any) {
-        let deleteCandidateItems = realm.objects(DeleteCandidateItem.self)
-
-        if(deleteCandidateItems.first != nil){
-            for dci in deleteCandidateItems{
-                try! realm.write {
-                    realm.delete(dci)
-                }
-            }
-        }
+        self.resetController.reset()
         
         let nextStoryBoard = UIStoryboard(name: "History", bundle: nil)
         let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: "HistoryViewControllerID")
@@ -52,15 +44,7 @@ class Footer: UIView {
     }
     
     @IBAction func touchUpInsideHomeButton(_ sender: Any) {
-        let deleteCandidateItems = realm.objects(DeleteCandidateItem.self)
-
-        if(deleteCandidateItems.first != nil){
-            for dci in deleteCandidateItems{
-                try! realm.write {
-                    realm.delete(dci)
-                }
-            }
-        }
+        self.resetController.reset()
         
         let nextStoryBoard = UIStoryboard(name: "Home", bundle: nil)
         let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: "HomeViewControllerID")
@@ -69,15 +53,7 @@ class Footer: UIView {
     
     
     @IBAction func touchUpInsideSettingButton(_ sender: Any) {
-        let deleteCandidateItems = realm.objects(DeleteCandidateItem.self)
-
-        if(deleteCandidateItems.first != nil){
-            for dci in deleteCandidateItems{
-                try! realm.write {
-                    realm.delete(dci)
-                }
-            }
-        }
+        self.resetController.reset()
         
         let nextStoryBoard = UIStoryboard(name: "Setting", bundle: nil)
         let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: "SettingViewControllerID")
