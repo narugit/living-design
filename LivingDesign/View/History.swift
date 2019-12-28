@@ -13,6 +13,7 @@ import RealmSwift
 class History: UIViewController, UITableViewDataSource, UITableViewDelegate{
     @IBOutlet weak var tableView: UITableView!
     let realm = try! Realm()
+    private let wireframe: RootViewWireframe = RootViewWireframe()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,14 @@ class History: UIViewController, UITableViewDataSource, UITableViewDelegate{
         cell.setCell(indexPath: indexPath, photoName: itemInRealm[indexPath.row].photo, name: itemInRealm[indexPath.row].name, date: itemInRealm[indexPath.row].purchaseDate, isUsing: itemInRealm[indexPath.row].getIsUse(), genre: genre)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // タップされたセルの行番号を出力
+        let itemInRealm = self.realm.objects(AllItem.self)
+        let nextStoryBoard = UIStoryboard(name: "Detail", bundle: nil)
+        let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: "DetailViewControllerID")
+        self.wireframe.transition(to: nextViewController, data: itemInRealm[indexPath.row].getId())
     }
     
     override func didReceiveMemoryWarning() {
