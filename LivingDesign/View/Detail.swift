@@ -70,10 +70,16 @@ class Detail: UIViewController {
             // Itemから削除
             // AllItemのisUseをfalseにする
             // Home画面に遷移
+            let today = DateFormatter()
+            today.dateFormat = "yyyy/MM/dd"
+            let now = Date()
+            
             try! self.realm.write {
                 self.realm.delete(self.realm.objects(Item.self).filter("id == %@",self.id).first!)
-                self.realm.objects(AllItem.self).filter("id == %@",self.id).first?.setDisposalDate(disposalDate: "2019/12/01")
+                self.realm.objects(AllItem.self).filter("id == %@",self.id).first?.setDisposalDate(disposalDate: today.string(from: now))
             }
+            
+            
             
             let nextStoryBoard = UIStoryboard(name: "Home", bundle: nil)
             let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: "HomeViewControllerID")
