@@ -26,6 +26,8 @@ class Detail: UIViewController {
     @IBOutlet weak var otherTargets: UILabel!
     @IBOutlet weak var photo: UIImageView!
     
+    let realm = try! Realm()
+    var id: String?
     
     var currentSelected : Int?
     private let wireframe: RootViewWireframe = RootViewWireframe()
@@ -37,6 +39,7 @@ class Detail: UIViewController {
         let shareData = realm.objects(ShareInNavigation.self).first
         print(shareData!.data)
         let inputId:String = shareData!.data
+        self.id = inputId
         let thisItem = realm.objects(Item.self).filter("id == %@",inputId).first
         print(thisItem)
         self.name.text = thisItem!.name
@@ -60,6 +63,31 @@ class Detail: UIViewController {
     
 
     @IBAction func TouchUpInsideDepositButton(_ sender: Any) {
+        let alert: UIAlertController = UIAlertController(title: "家電を廃棄", message: "この家電を本当に廃棄しますか？", preferredStyle:  UIAlertController.Style.actionSheet)
+        
+        let depositAction: UIAlertAction = UIAlertAction(title: "廃棄", style: UIAlertAction.Style.destructive, handler:{
+            (action: UIAlertAction!) -> Void in
+            // Itemから削除
+            // AllItemのisUseをfalseにする
+            // Home画面に遷移
+            try! self.realm.write {
+                self.realm.delete(self.realm.objects(Item.self).filter("id == %@",self.id).first!)
+                self.realm.objects(AllItem.self).filter("id == %@",self.id).first?.setDisposalDate(disposalDate: "2019/12/01")
+            }
+            
+            let nextStoryBoard = UIStoryboard(name: "Home", bundle: nil)
+            let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: "HomeViewControllerID")
+            self.wireframe.transition(to: nextViewController)
+        })
+        
+        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler:{
+            (action: UIAlertAction!) -> Void in
+        })
+        
+        alert.addAction(depositAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
     }
     
     
