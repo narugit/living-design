@@ -25,9 +25,10 @@ class Detail: UIViewController {
     @IBOutlet weak var comfort: UILabel!
     @IBOutlet weak var otherTargets: UILabel!
     @IBOutlet weak var photo: UIImageView!
+    @IBOutlet weak var memo: UILabel!
     
-    
-    var currentSelected : Int?
+    var thisItem: Item = Item()
+    var currentSelected: Int?
     private let wireframe: RootViewWireframe = RootViewWireframe()
     
     override func viewDidLoad() {
@@ -37,18 +38,19 @@ class Detail: UIViewController {
         let shareData = realm.objects(ShareInNavigation.self).first
         print(shareData!.data)
         let inputId:String = shareData!.data
-        let thisItem = realm.objects(Item.self).filter("id == %@",inputId).first
+        thisItem = realm.objects(Item.self).filter("id == %@",inputId).first!
         print(thisItem)
-        self.name.text = thisItem!.name
-        self.genre.text = thisItem!.genre
-        self.modelNumber.text = thisItem!.modelNumber
-        //self.price.text = thisItem!.price
-        self.purchaseDate.text = thisItem!.purchaseDate
-        self.reason.text = thisItem!.reason
-        //self.comfort.text = thisItem!
-        self.warrantyPeriod.text = thisItem!.warrantyPeriod
-        self.otherTargets.text = thisItem!.otherTargets
-        //self.photo.image = thisItem!.photo
+        self.name.text = self.thisItem.name
+        self.genre.text = self.thisItem.genre
+        self.modelNumber.text = self.thisItem.modelNumber
+        self.price.text = String(self.thisItem.price)
+        self.purchaseDate.text = self.thisItem.purchaseDate
+        self.reason.text = self.thisItem.reason
+        self.comfort.text = String(self.thisItem.confort)
+        self.warrantyPeriod.text = self.thisItem.warrantyPeriod
+        self.otherTargets.text = self.thisItem.otherTargets
+        self.photo.image = UIImage(named:self.thisItem.photo)
+        self.memo.text = self.thisItem.memo
     }
     
     

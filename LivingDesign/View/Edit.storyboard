@@ -105,7 +105,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vH6-Ip-QJu" customClass="PDFView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vH6-Ip-QJu" customClass="UIImageView">
                                 <rect key="frame" x="64.5" y="139" width="285" height="285"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -142,6 +142,7 @@
                                         </constraints>
                                         <state key="normal" title="登録"/>
                                         <connections>
+                                            <action selector="TouchUpInsideRegisterButton:" destination="Lh4-UD-nJk" eventType="touchUpInside" id="QMC-OC-8us"/>
                                             <action selector="TouchUpInsideReturnButton:" destination="Lh4-UD-nJk" eventType="touchUpInside" id="aFb-Lx-xwa"/>
                                         </connections>
                                     </button>
@@ -173,12 +174,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ocS-tA-SFl">
-                                <rect key="frame" x="10" y="10" width="0.0" height="0.0"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C5r-7D-ec8">
                                 <rect key="frame" x="165" y="658" width="240" height="29"/>
                                 <constraints>
@@ -193,15 +188,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="MWk-eG-mLN"/>
                                     <constraint firstAttribute="width" constant="240" id="heO-f1-mzD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7sJ-J6-4QT">
-                                <rect key="frame" x="165" y="760" width="240" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="S7u-E6-yDW"/>
-                                    <constraint firstAttribute="width" constant="240" id="mYV-wL-N7O"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -251,6 +237,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f9A-GC-r8a">
+                                <rect key="frame" x="165" y="760" width="240" height="29"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="5uG-QK-0ux"/>
+                                    <constraint firstAttribute="height" constant="29" id="OSO-nw-XPK"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -286,12 +284,13 @@
                             <constraint firstItem="Qc8-Wf-bPh" firstAttribute="leading" secondItem="C1X-uW-LuC" secondAttribute="trailing" id="aVC-pP-Awx"/>
                             <constraint firstItem="Ort-X6-dhV" firstAttribute="top" secondItem="vH6-Ip-QJu" secondAttribute="bottom" constant="30" id="aYi-dw-Kpt"/>
                             <constraint firstItem="LSm-RZ-6oj" firstAttribute="leading" secondItem="Znl-au-HM5" secondAttribute="trailing" id="civ-Rm-RE3"/>
+                            <constraint firstItem="f9A-GC-r8a" firstAttribute="top" secondItem="d0n-nE-UeI" secondAttribute="bottom" constant="5" id="coa-lA-jKK"/>
                             <constraint firstItem="dNw-D8-nXx" firstAttribute="leading" secondItem="xQY-Up-m0h" secondAttribute="leading" id="eOo-cB-f6D"/>
                             <constraint firstItem="OKF-B1-KXh" firstAttribute="top" secondItem="4OD-A2-x72" secondAttribute="bottom" constant="5" id="ecB-FO-dPq"/>
                             <constraint firstItem="Tv2-Tr-4DC" firstAttribute="trailing" secondItem="xQY-Up-m0h" secondAttribute="trailing" id="fIs-sC-McI"/>
                             <constraint firstItem="C5r-7D-ec8" firstAttribute="leading" secondItem="OKF-B1-KXh" secondAttribute="trailing" id="gj8-Dg-Raf"/>
                             <constraint firstItem="4OD-A2-x72" firstAttribute="top" secondItem="YVs-3y-WV4" secondAttribute="bottom" constant="5" id="h1L-16-PFh"/>
-                            <constraint firstItem="7sJ-J6-4QT" firstAttribute="top" secondItem="d0n-nE-UeI" secondAttribute="bottom" constant="5" id="jsd-uk-90U"/>
+                            <constraint firstItem="f9A-GC-r8a" firstAttribute="leading" secondItem="nDj-ok-5ZR" secondAttribute="trailing" id="hsk-tf-mCc"/>
                             <constraint firstItem="LSm-RZ-6oj" firstAttribute="top" secondItem="Qc8-Wf-bPh" secondAttribute="bottom" constant="5" id="mfp-nw-cTs"/>
                             <constraint firstItem="EV5-mi-RnR" firstAttribute="leading" secondItem="xQY-Up-m0h" secondAttribute="leading" constant="40" id="nAT-rr-8SX"/>
                             <constraint firstItem="C1X-uW-LuC" firstAttribute="leading" secondItem="xQY-Up-m0h" secondAttribute="leading" constant="40" id="pHx-zm-t9V"/>
@@ -301,17 +300,18 @@
                             <constraint firstItem="8oN-Ky-RW7" firstAttribute="leading" secondItem="OKF-B1-KXh" secondAttribute="trailing" id="sVf-cJ-YxD"/>
                             <constraint firstItem="Qc8-Wf-bPh" firstAttribute="top" secondItem="Ort-X6-dhV" secondAttribute="bottom" constant="39" id="tBn-a1-Lnq"/>
                             <constraint firstItem="4OD-A2-x72" firstAttribute="leading" secondItem="xQY-Up-m0h" secondAttribute="leading" constant="40" id="tHW-gc-m3z"/>
-                            <constraint firstItem="7sJ-J6-4QT" firstAttribute="leading" secondItem="nDj-ok-5ZR" secondAttribute="trailing" id="xq0-pO-gwR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xQY-Up-m0h"/>
                     </view>
                     <connections>
-                        <outlet property="buyDate" destination="Hne-8E-kqm" id="8X0-K2-Hae"/>
-                        <outlet property="buyReason" destination="C5r-7D-ec8" id="J78-Um-Jx8"/>
-                        <outlet property="model" destination="Qc8-Wf-bPh" id="hqe-Rc-QsP"/>
+                        <outlet property="comfort" destination="6Uc-ln-uDD" id="ABt-iK-jWu"/>
+                        <outlet property="modelNumber" destination="Qc8-Wf-bPh" id="hlq-SK-VUO"/>
                         <outlet property="name" destination="Ort-X6-dhV" id="cF6-ya-w1r"/>
+                        <outlet property="otherTargets" destination="d0n-nE-UeI" id="aDF-Lx-m1Y"/>
+                        <outlet property="photo" destination="vH6-Ip-QJu" id="3U3-6r-HBp"/>
                         <outlet property="price" destination="LSm-RZ-6oj" id="rIN-qh-fM1"/>
-                        <outlet property="productImage" destination="vH6-Ip-QJu" id="chO-2V-Fhq"/>
+                        <outlet property="purchaseDate" destination="Hne-8E-kqm" id="tni-Hl-n9r"/>
+                        <outlet property="reason" destination="C5r-7D-ec8" id="jXa-ky-1hr"/>
                         <outlet property="warrantyPeriod" destination="8oN-Ky-RW7" id="fz4-XG-HTj"/>
                     </connections>
                 </viewController>

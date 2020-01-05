@@ -14,15 +14,7 @@ class NewProduct: UIViewController {
     
    
     //@IBOutlet weak var productImage: UIImageView!
-    @IBOutlet weak var category: UILabel!
-    @IBOutlet weak var model: UILabel!
-    @IBOutlet weak var price: UILabel!
-    @IBOutlet weak var date: UILabel!
-    @IBOutlet weak var buyreason: UILabel!
-    @IBOutlet weak var assessment: UILabel!
-    @IBOutlet weak var candidate: UILabel!
-    @IBOutlet weak var memo: UILabel!
-    @IBOutlet weak var productImage: UIImageView!
+
     
     var currentSelected : Int?
     private let wireframe: RootViewWireframe = RootViewWireframe()
