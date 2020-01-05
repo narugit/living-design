@@ -29,6 +29,8 @@ class Detail: UIViewController {
     
     var thisItem: Item = Item()
     var currentSelected: Int?
+    let realm = try! Realm()
+    var id: String?
     private let wireframe: RootViewWireframe = RootViewWireframe()
     
     override func viewDidLoad() {
@@ -39,6 +41,7 @@ class Detail: UIViewController {
         print(shareData!.data)
         let inputId:String = shareData!.data
         thisItem = realm.objects(Item.self).filter("id == %@",inputId).first!
+        self.id = inputId
         print(thisItem)
         self.name.text = self.thisItem.name
         self.genre.text = self.thisItem.genre
@@ -62,6 +65,37 @@ class Detail: UIViewController {
     
 
     @IBAction func TouchUpInsideDepositButton(_ sender: Any) {
+        let alert: UIAlertController = UIAlertController(title: "家電を廃棄", message: "この家電を本当に廃棄しますか？", preferredStyle:  UIAlertController.Style.actionSheet)
+        
+        let depositAction: UIAlertAction = UIAlertAction(title: "廃棄", style: UIAlertAction.Style.destructive, handler:{
+            (action: UIAlertAction!) -> Void in
+            // Itemから削除
+            // AllItemのisUseをfalseにする
+            // Home画面に遷移
+            let today = DateFormatter()
+            today.dateFormat = "yyyy/MM/dd"
+            let now = Date()
+            
+            try! self.realm.write {
+                self.realm.delete(self.realm.objects(Item.self).filter("id == %@",self.id).first!)
+                self.realm.objects(AllItem.self).filter("id == %@",self.id).first?.setDisposalDate(disposalDate: today.string(from: now))
+            }
+            
+            
+            
+            let nextStoryBoard = UIStoryboard(name: "Home", bundle: nil)
+            let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: "HomeViewControllerID")
+            self.wireframe.transition(to: nextViewController)
+        })
+        
+        let cancelAction: UIAlertAction = UIAlertAction(title: "キャンセル", style: UIAlertAction.Style.cancel, handler:{
+            (action: UIAlertAction!) -> Void in
+        })
+        
+        alert.addAction(depositAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
     }
     
     

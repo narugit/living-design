@@ -73,11 +73,15 @@ class Delete: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     // 完了ボタンを押すと、削除リストを取得して、realmから削除する
     @IBAction func touchUpInsideCompleteButton(_ sender: Any) {
         let deleteCandidateItems = realm.objects(DeleteCandidateItem.self)
+        
+        let today = DateFormatter()
+        today.dateFormat = "yyyy/MM/dd"
+        let now = Date()
 
         for dci in deleteCandidateItems{
             try! realm.write {
                 realm.delete(realm.objects(Item.self).filter("id == %@",dci.id).first!)
-                realm.objects(AllItem.self).filter("id == %@",dci.id).first?.setDisposalDate(disposalDate: "2019/12/01")
+                realm.objects(AllItem.self).filter("id == %@",dci.id).first?.setDisposalDate(disposalDate: today.string(from: now))
             }
         }
         

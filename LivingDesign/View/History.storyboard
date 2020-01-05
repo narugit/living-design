@@ -115,6 +115,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGX-XC-b0w">
                                         <rect key="frame" x="364" y="7.5" width="30" height="30"/>
                                         <state key="normal" title="↑↓"/>
+                                        <connections>
+                                            <action selector="touchUpInsideSortButton:" destination="IgY-AR-ZAm" eventType="touchUpInside" id="lgc-pV-IRv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97254901960784312" green="0.972525537" blue="0.9725503325" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -143,6 +146,7 @@
                         <viewLayoutGuide key="safeArea" id="VHO-ZL-7vO"/>
                     </view>
                     <connections>
+                        <outlet property="sortButton" destination="eGX-XC-b0w" id="EZL-iP-NKc"/>
                         <outlet property="tableView" destination="c4S-0A-7ut" id="JmI-Ba-iea"/>
                     </connections>
                 </viewController>
