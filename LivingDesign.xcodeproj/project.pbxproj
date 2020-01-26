@@ -54,6 +54,7 @@
 		43C37064236D6B680033BDCD /* Footer.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43C37063236D6B680033BDCD /* Footer.xib */; };
 		43C37066236D6BBD0033BDCD /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43C37065236D6BBD0033BDCD /* test.storyboard */; };
 		43CB4957236D052900FB2C6B /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CB4956236D052900FB2C6B /* HistoryTableViewCell.swift */; };
+		43E3E0CD23DD5BCE0052D8BB /* smallGenreData.json in Resources */ = {isa = PBXBuildFile; fileRef = 43E3E0CC23DD5BCE0052D8BB /* smallGenreData.json */; };
 		43F8B941235E885D000E084E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F8B940235E885D000E084E /* Home.swift */; };
 		44F26FA1392E1F1E44661A2E /* Pods_LivingDesignTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA0394071195B0505D9AE90 /* Pods_LivingDesignTests.framework */; };
 		863359192084EA19900F9075 /* Pods_LivingDesign_LivingDesignUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0864A8326866EA9BE68969 /* Pods_LivingDesign_LivingDesignUITests.framework */; };
@@ -136,6 +137,7 @@
 		43C37063236D6B680033BDCD /* Footer.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Footer.xib; sourceTree = "<group>"; };
 		43C37065236D6BBD0033BDCD /* test.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
 		43CB4956236D052900FB2C6B /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		43E3E0CC23DD5BCE0052D8BB /* smallGenreData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = smallGenreData.json; sourceTree = "<group>"; };
 		43F8B940235E885D000E084E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		52ED5418BE562650CEB4AA53 /* Pods-LivingDesignTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivingDesignTests.debug.xcconfig"; path = "Target Support Files/Pods-LivingDesignTests/Pods-LivingDesignTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5D2677BED2440623EBE096B8 /* Pods-LivingDesign-LivingDesignUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivingDesign-LivingDesignUITests.release.xcconfig"; path = "Target Support Files/Pods-LivingDesign-LivingDesignUITests/Pods-LivingDesign-LivingDesignUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				436166EE237D7D6000A496EC /* testItemData.json */,
 				436166EC237D7BC600A496EC /* testGenreData.json */,
 				436874742361E941001109AF /* DataStructure.swift */,
+				43E3E0CC23DD5BCE0052D8BB /* smallGenreData.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				43A3CEF5235F01DB0009E965 /* microwave.pdf in Resources */,
 				43C37064236D6B680033BDCD /* Footer.xib in Resources */,
 				4347ABA52354A1A200AF0F9D /* Setting.storyboard in Resources */,
+				43E3E0CD23DD5BCE0052D8BB /* smallGenreData.json in Resources */,
 				43A3CEF1235F01D00009E965 /* aircon.pdf in Resources */,
 				4347AB9F2354A17200AF0F9D /* Detail.storyboard in Resources */,
 				43A3CEED235EF61B0009E965 /* oven.pdf in Resources */,

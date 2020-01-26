@@ -157,6 +157,14 @@
                                     <constraint firstAttribute="trailing" secondItem="VoQ-SS-50d" secondAttribute="trailing" constant="20" id="wDu-1i-F26"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeu-1R-C1h" userLabel="GenreRect">
+                                <rect key="frame" x="165" y="488" width="240" height="29"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="kWC-Gi-O7I"/>
+                                    <constraint firstAttribute="height" constant="29" id="niv-l9-s3Z"/>
+                                </constraints>
+                            </view>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ora-4N-Fxd" userLabel="Name">
                                 <rect key="frame" x="165" y="454" width="240" height="29"/>
                                 <constraints>
@@ -166,6 +174,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uN-eD-Cuh" customClass="PickerButton" customModule="PickerButton">
+                                <rect key="frame" x="170" y="488" width="235" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="235" id="2yp-Qk-8yV"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFn-fC-WG9" userLabel="Model Number">
                                 <rect key="frame" x="165" y="522" width="240" height="29"/>
                                 <constraints>
@@ -245,14 +263,6 @@
                                     <constraint firstAttribute="height" constant="84" id="ZRh-1r-qtu"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uN-eD-Cuh" customClass="PickerButton" customModule="PickerButton">
-                                <rect key="frame" x="165" y="488" width="240" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="iPG-Fi-frv"/>
-                                    <constraint firstAttribute="width" constant="240" id="zqa-jl-zvW"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -271,18 +281,21 @@
                             <constraint firstItem="1ZX-ta-7bT" firstAttribute="leading" secondItem="gEN-Db-cIn" secondAttribute="trailing" id="EzZ-8k-iG8"/>
                             <constraint firstItem="En2-Pu-cBk" firstAttribute="leading" secondItem="Yo2-9s-efF" secondAttribute="leading" constant="40" id="F2u-bx-Ree"/>
                             <constraint firstItem="Gyd-k6-Zzx" firstAttribute="top" secondItem="1ZX-ta-7bT" secondAttribute="bottom" constant="5" id="ISa-MZ-M6c"/>
+                            <constraint firstItem="Yo2-9s-efF" firstAttribute="trailing" secondItem="5uN-eD-Cuh" secondAttribute="trailing" constant="9" id="JVC-AQ-gJU"/>
                             <constraint firstItem="Vzd-8c-ieC" firstAttribute="centerX" secondItem="PEH-wX-4Te" secondAttribute="centerX" id="K2D-7c-6CY"/>
-                            <constraint firstItem="5uN-eD-Cuh" firstAttribute="leading" secondItem="DfY-QQ-qzY" secondAttribute="trailing" id="N4a-If-Ex5"/>
                             <constraint firstItem="so5-Yw-dCm" firstAttribute="top" secondItem="0nR-ra-Pqg" secondAttribute="bottom" constant="5" id="NaQ-cE-8Jc"/>
                             <constraint firstItem="ora-4N-Fxd" firstAttribute="top" secondItem="Vzd-8c-ieC" secondAttribute="bottom" constant="30" id="P8e-yZ-S5P"/>
+                            <constraint firstItem="oeu-1R-C1h" firstAttribute="top" secondItem="ora-4N-Fxd" secondAttribute="bottom" constant="5" id="PoF-6A-aJN"/>
                             <constraint firstItem="6XD-yh-XmG" firstAttribute="leading" secondItem="Yo2-9s-efF" secondAttribute="leading" constant="40" id="QET-Vy-1ho"/>
-                            <constraint firstItem="5uN-eD-Cuh" firstAttribute="top" secondItem="ora-4N-Fxd" secondAttribute="bottom" constant="5" id="QYa-XH-oEq"/>
                             <constraint firstItem="pnr-0w-yBc" firstAttribute="trailing" secondItem="Yo2-9s-efF" secondAttribute="trailing" id="RDj-Um-dWJ"/>
+                            <constraint firstItem="5uN-eD-Cuh" firstAttribute="leading" secondItem="DfY-QQ-qzY" secondAttribute="trailing" constant="5" id="V1Y-Qm-w3J"/>
                             <constraint firstItem="j3o-I6-Nqa" firstAttribute="leading" secondItem="MAk-b2-7cZ" secondAttribute="trailing" id="WFJ-4Q-KCm"/>
                             <constraint firstItem="xhP-Vg-qgb" firstAttribute="leading" secondItem="Yo2-9s-efF" secondAttribute="leading" constant="40" id="WvN-hk-KUw"/>
+                            <constraint firstItem="Yo2-9s-efF" firstAttribute="trailing" secondItem="oeu-1R-C1h" secondAttribute="trailing" constant="9" id="Wy4-tP-2hc"/>
                             <constraint firstItem="pnr-0w-yBc" firstAttribute="top" secondItem="Yo2-9s-efF" secondAttribute="top" id="Zdf-Dq-i79"/>
                             <constraint firstItem="ora-4N-Fxd" firstAttribute="leading" secondItem="nCa-1H-aQi" secondAttribute="trailing" id="ZkW-z9-Eb8"/>
                             <constraint firstItem="En2-Pu-cBk" firstAttribute="top" secondItem="DlQ-H1-Tsd" secondAttribute="bottom" constant="5" id="bVC-gx-BSq"/>
+                            <constraint firstItem="5uN-eD-Cuh" firstAttribute="top" secondItem="ora-4N-Fxd" secondAttribute="bottom" constant="5" id="dcU-Ha-ySX"/>
                             <constraint firstItem="so5-Yw-dCm" firstAttribute="leading" secondItem="En2-Pu-cBk" secondAttribute="trailing" id="eiR-PC-TX8"/>
                             <constraint firstItem="nCa-1H-aQi" firstAttribute="top" secondItem="Vzd-8c-ieC" secondAttribute="bottom" constant="30" id="ein-v0-xkP"/>
                             <constraint firstItem="Gyd-k6-Zzx" firstAttribute="leading" secondItem="xhP-Vg-qgb" secondAttribute="trailing" id="ell-mx-xMg"/>
@@ -295,6 +308,7 @@
                             <constraint firstItem="Vzd-8c-ieC" firstAttribute="top" secondItem="pnr-0w-yBc" secondAttribute="bottom" constant="50" id="ks7-eL-kUY"/>
                             <constraint firstItem="MAk-b2-7cZ" firstAttribute="leading" secondItem="Yo2-9s-efF" secondAttribute="leading" constant="40" id="lRX-vJ-e8y"/>
                             <constraint firstItem="0nR-ra-Pqg" firstAttribute="top" secondItem="Gyd-k6-Zzx" secondAttribute="bottom" constant="5" id="lfc-RR-JIf"/>
+                            <constraint firstItem="oeu-1R-C1h" firstAttribute="leading" secondItem="DfY-QQ-qzY" secondAttribute="trailing" id="n1J-PB-JAo"/>
                             <constraint firstItem="MAk-b2-7cZ" firstAttribute="top" secondItem="GcD-RU-tMA" secondAttribute="bottom" constant="5" id="n8F-3u-8yj"/>
                             <constraint firstItem="pnr-0w-yBc" firstAttribute="leading" secondItem="Yo2-9s-efF" secondAttribute="leading" id="o8e-fA-KnZ"/>
                             <constraint firstItem="6XD-yh-XmG" firstAttribute="top" secondItem="MAk-b2-7cZ" secondAttribute="bottom" constant="5" id="oMr-rZ-6sy"/>
@@ -303,7 +317,6 @@
                             <constraint firstItem="0nR-ra-Pqg" firstAttribute="leading" secondItem="DlQ-H1-Tsd" secondAttribute="trailing" id="rqC-Jl-B47"/>
                             <constraint firstItem="1ZX-ta-7bT" firstAttribute="top" secondItem="Qz0-Mm-uq4" secondAttribute="bottom" constant="5" id="vcW-qU-h0e"/>
                             <constraint firstItem="GcD-RU-tMA" firstAttribute="top" secondItem="DfY-QQ-qzY" secondAttribute="bottom" constant="5" id="xKi-kj-Ruj"/>
-                            <constraint firstItem="Yo2-9s-efF" firstAttribute="trailing" secondItem="5uN-eD-Cuh" secondAttribute="trailing" constant="9" id="xn3-Kg-tLV"/>
                             <constraint firstItem="g0P-jw-Pm4" firstAttribute="leading" secondItem="6XD-yh-XmG" secondAttribute="trailing" id="zX7-Jb-NJN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Yo2-9s-efF"/>
@@ -311,6 +324,7 @@
                     <connections>
                         <outlet property="comfort" destination="Gyd-k6-Zzx" id="bcF-Uk-8Gb"/>
                         <outlet property="genre" destination="5uN-eD-Cuh" id="chR-Cf-rQU"/>
+                        <outlet property="genreRect" destination="oeu-1R-C1h" id="0WN-ut-N4e"/>
                         <outlet property="memo" destination="so5-Yw-dCm" id="KCE-oo-JX4"/>
                         <outlet property="modelNumber" destination="bFn-fC-WG9" id="ZYU-2n-RAT"/>
                         <outlet property="name" destination="ora-4N-Fxd" id="L3p-Li-1mM"/>

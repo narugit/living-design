@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -249,6 +249,29 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGU-HK-1En" userLabel="GenreRect">
+                                <rect key="frame" x="165" y="488" width="240" height="29"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kI-HA-oud" userLabel="Genre" customClass="PickerButton" customModule="PickerButton">
+                                        <rect key="frame" x="5" y="0.0" width="235" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="235" id="A2B-0b-UIL"/>
+                                            <constraint firstAttribute="height" constant="29" id="kqw-Jm-sgU"/>
+                                        </constraints>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5kI-HA-oud" secondAttribute="trailing" id="00A-TC-APN"/>
+                                    <constraint firstAttribute="height" constant="29" id="Jn5-Et-voI"/>
+                                    <constraint firstItem="5kI-HA-oud" firstAttribute="top" secondItem="xGU-HK-1En" secondAttribute="top" id="M5U-wj-eCJ"/>
+                                    <constraint firstAttribute="width" constant="240" id="WIZ-ic-ql3"/>
+                                    <constraint firstItem="5kI-HA-oud" firstAttribute="leading" secondItem="xGU-HK-1En" secondAttribute="leading" constant="5" id="dG0-po-lrm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -263,12 +286,14 @@
                             <constraint firstItem="Ort-X6-dhV" firstAttribute="leading" secondItem="FG7-ft-wTy" secondAttribute="trailing" id="CMl-gr-xF4"/>
                             <constraint firstItem="bw8-H7-nzC" firstAttribute="top" secondItem="C1X-uW-LuC" secondAttribute="bottom" constant="5" id="ClG-Mq-L8h"/>
                             <constraint firstItem="C1X-uW-LuC" firstAttribute="top" secondItem="FG7-ft-wTy" secondAttribute="bottom" constant="5" id="EA2-U8-FbN"/>
+                            <constraint firstItem="xGU-HK-1En" firstAttribute="top" secondItem="Ort-X6-dhV" secondAttribute="bottom" constant="5" id="EHn-h6-lKT"/>
                             <constraint firstItem="EV5-mi-RnR" firstAttribute="top" secondItem="OKF-B1-KXh" secondAttribute="bottom" constant="5" id="Fxm-dp-hcJ"/>
                             <constraint firstItem="bw8-H7-nzC" firstAttribute="leading" secondItem="xQY-Up-m0h" secondAttribute="leading" constant="40" id="Hir-fz-BNT"/>
                             <constraint firstItem="C5r-7D-ec8" firstAttribute="top" secondItem="8oN-Ky-RW7" secondAttribute="bottom" constant="5" id="JMq-4M-9Fg"/>
                             <constraint firstItem="6Uc-ln-uDD" firstAttribute="top" secondItem="C5r-7D-ec8" secondAttribute="bottom" constant="5" id="Mmt-kZ-15N"/>
                             <constraint firstItem="Qyq-LR-6xd" firstAttribute="top" secondItem="EV5-mi-RnR" secondAttribute="bottom" constant="5" id="Og9-KZ-V3f"/>
                             <constraint firstItem="YVs-3y-WV4" firstAttribute="top" secondItem="Znl-au-HM5" secondAttribute="bottom" constant="5" id="Owe-ur-PxR"/>
+                            <constraint firstItem="xQY-Up-m0h" firstAttribute="trailing" secondItem="xGU-HK-1En" secondAttribute="trailing" constant="9" id="PJs-w8-I2r"/>
                             <constraint firstItem="nDj-ok-5ZR" firstAttribute="leading" secondItem="xQY-Up-m0h" secondAttribute="leading" constant="40" id="QJ8-1n-gDh"/>
                             <constraint firstItem="Tv2-Tr-4DC" firstAttribute="leading" secondItem="xQY-Up-m0h" secondAttribute="leading" id="R0p-85-HYd"/>
                             <constraint firstItem="nDj-ok-5ZR" firstAttribute="top" secondItem="Qyq-LR-6xd" secondAttribute="bottom" constant="5" id="ReN-N7-S8K"/>
@@ -291,6 +316,7 @@
                             <constraint firstItem="C5r-7D-ec8" firstAttribute="leading" secondItem="OKF-B1-KXh" secondAttribute="trailing" id="gj8-Dg-Raf"/>
                             <constraint firstItem="4OD-A2-x72" firstAttribute="top" secondItem="YVs-3y-WV4" secondAttribute="bottom" constant="5" id="h1L-16-PFh"/>
                             <constraint firstItem="f9A-GC-r8a" firstAttribute="leading" secondItem="nDj-ok-5ZR" secondAttribute="trailing" id="hsk-tf-mCc"/>
+                            <constraint firstItem="xGU-HK-1En" firstAttribute="leading" secondItem="C1X-uW-LuC" secondAttribute="trailing" id="m13-cQ-p0C"/>
                             <constraint firstItem="LSm-RZ-6oj" firstAttribute="top" secondItem="Qc8-Wf-bPh" secondAttribute="bottom" constant="5" id="mfp-nw-cTs"/>
                             <constraint firstItem="EV5-mi-RnR" firstAttribute="leading" secondItem="xQY-Up-m0h" secondAttribute="leading" constant="40" id="nAT-rr-8SX"/>
                             <constraint firstItem="C1X-uW-LuC" firstAttribute="leading" secondItem="xQY-Up-m0h" secondAttribute="leading" constant="40" id="pHx-zm-t9V"/>
@@ -305,6 +331,8 @@
                     </view>
                     <connections>
                         <outlet property="comfort" destination="6Uc-ln-uDD" id="ABt-iK-jWu"/>
+                        <outlet property="genre" destination="5kI-HA-oud" id="R0J-Ny-U4A"/>
+                        <outlet property="genreRect" destination="xGU-HK-1En" id="Rpc-LR-RQ0"/>
                         <outlet property="modelNumber" destination="Qc8-Wf-bPh" id="hlq-SK-VUO"/>
                         <outlet property="name" destination="Ort-X6-dhV" id="cF6-ya-w1r"/>
                         <outlet property="otherTargets" destination="d0n-nE-UeI" id="aDF-Lx-m1Y"/>

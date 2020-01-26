@@ -2,7 +2,7 @@
     {
         "id": "10000",
         "name": "洗濯機",
-        "genre": "家電",
+        "genre": "洗濯機",
         "modelNumber": "111111",
         "price": 20000,
         "purchaseDate": "2019/11/10",
@@ -16,7 +16,7 @@
     {
         "id": "10001",
         "name": "テレビ",
-        "genre": "家電",
+        "genre": "テレビ",
         "modelNumber": "22222",
         "price": 10000,
         "purchaseDate": "2019/08/10",
@@ -30,7 +30,7 @@
     {
         "id": "10002",
         "name": "コピー機",
-        "genre": "家電",
+        "genre": "コピー機",
         "modelNumber": "dfsdf2",
         "price": 10000,
         "purchaseDate": "2019/04/10",
@@ -44,7 +44,7 @@
     {
         "id": "10003",
         "name": "オーブン",
-        "genre": "家電",
+        "genre": "オーブン",
         "modelNumber": "22ddfs2",
         "price": 10000,
         "purchaseDate": "2019/02/10",

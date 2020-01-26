@@ -20,6 +20,10 @@ class Genre: Object, Decodable{
     @objc dynamic var name: String = ""
 }
 
+class SmallGenre: Object, Decodable{
+    @objc dynamic var name: String = ""
+}
+
 class Item: Object, Decodable{
     @objc private dynamic var id: String = NSUUID().uuidString
     @objc dynamic var name: String = ""

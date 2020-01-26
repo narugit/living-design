@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let config = Realm.Configuration(
             // データ構造変更するたびに更新する必要あり。前よりも大きな値にする
-            schemaVersion: 14,
+            schemaVersion: 21,
             
             //スキーマのバージョンが上記のものよりも低いものを開こうとした場合、自動的に呼び出されるブロックを設定する
             migrationBlock: { migration, oldSchemaVersion in
@@ -39,6 +39,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         printRealmFilePath()
         print(realm, "Realm")
         print(config,"Realm Version")
+        
+        // small genreの削除
+        let smallGenreInRealm = realm.objects(SmallGenre.self).first
+        if(smallGenreInRealm != nil){
+            try! realm.write {
+                realm.delete(smallGenreInRealm!)
+            }
+            print("smallGenreを削除")
+        } else{
+            print("smallGenreは空")
+        }
+        
+        let path = Bundle.main.path(forResource: "smallGenreData", ofType:"json")
+        let data = getFileData(path!)
+        let smallGenreData = try! JSONDecoder().decode([SmallGenre].self, from: data!) as! [SmallGenre]
+        for sgd in smallGenreData{
+            let smallGenre = SmallGenre()
+            smallGenre.name = sgd.name
+            
+            try! realm.write{
+                realm.add(smallGenre)
+            }
+        }
+        print("smallGenreを追加")
 
         // リリース時には削除する
         // Data/test.*Data.jsonを読み込んで、Realmに書き込む

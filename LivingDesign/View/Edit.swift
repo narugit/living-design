@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import RealmSwift
+import PickerButton
 
 class Edit: UIViewController {
     
@@ -20,28 +21,45 @@ class Edit: UIViewController {
     @IBOutlet weak var price: UITextField!
     @IBOutlet weak var purchaseDate: UITextField!
     @IBOutlet weak var reason: UITextField!
+    @IBOutlet weak var genre: PickerButton!
     
     @IBOutlet weak var comfort: UITextField!
     @IBOutlet weak var otherTargets: UITextField!
     @IBOutlet weak var warrantyPeriod: UITextField!
     @IBOutlet weak var photo: UIImageView!
     @IBOutlet weak var memo: UITextField!
+    @IBOutlet weak var genreRect: UIView!
     
     var thisItem: Item = Item()
     var thisAllItem: AllItem = AllItem()
     var currentSelected : Int?
     private let wireframe: RootViewWireframe = RootViewWireframe()
     
+    var genreValues = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let realm = try! Realm()
+        let smallGenreInRealm = realm.objects(SmallGenre.self)
+        
+        for sgr in smallGenreInRealm{
+            genreValues.append(sgr.name)
+        }
+        
+        self.genreRect.layer.borderColor = UIColor(red: 205/255, green: 205/255, blue: 205/255, alpha: 1.0).cgColor
+        self.genreRect.layer.cornerRadius = 5.0;
+        self.genreRect.layer.borderWidth = 1.0
+        
+        self.genre.delegate = self
+        self.genre.dataSource = self
+        
         let shareData = realm.objects(ShareInNavigation.self).first
         print(shareData!.data)
         let inputId:String = shareData!.data
         thisItem = realm.objects(Item.self).filter("id == %@",inputId).first!
         print(thisItem)
         self.name.text = self.thisItem.name
-        //self.genre.text = self.thisItem.genre
+        self.genre.setTitle(self.thisItem.genre, for: .normal)
         self.modelNumber.text = self.thisItem.modelNumber
         self.price.text = self.thisItem.price < 0 ? "" :String(self.thisItem.price)
         self.purchaseDate.text = self.thisItem.purchaseDate
@@ -67,7 +85,7 @@ class Edit: UIViewController {
         try! realm.write(){
             self.thisItem.name =
                 self.name.text!
-            //self.genre.text = self.thisItem.genre
+            //self.thisItem.genre = self.genre.titleLabel?.text
             self.thisItem.modelNumber = self.modelNumber.text!
             self.thisItem.price = Int(self.price.text!) ?? 0
             self.thisItem.purchaseDate = self.purchaseDate.text!
@@ -82,7 +100,7 @@ class Edit: UIViewController {
             
             self.thisAllItem.name =
                 self.thisItem.name
-            //self.genre.text = self.thisItem.genre
+            self.thisItem.genre = self.genre.currentTitle!
             self.thisAllItem.modelNumber =
             self.thisItem.modelNumber
             self.thisAllItem.price =
@@ -111,5 +129,17 @@ class Edit: UIViewController {
     
 }
 
+extension Edit: UIPickerViewDelegate, UIPickerViewDataSource {
 
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return genreValues[row]
+    }
 
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return genreValues.count
+    }
+}

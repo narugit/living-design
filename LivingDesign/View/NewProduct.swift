@@ -24,6 +24,7 @@ class NewProduct: UIViewController {
     @IBOutlet weak var other: UITextField!
     @IBOutlet weak var memo: UITextField!
     @IBOutlet weak var genre: PickerButton!
+    @IBOutlet weak var genreRect: UIView!
     
     
     var newItem: Item = Item()
@@ -34,13 +35,19 @@ class NewProduct: UIViewController {
     
     private let wireframe: RootViewWireframe = RootViewWireframe()
 
-    let genreValues: [String] = ["家電"]
+    var genreValues = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.genre.layer.borderColor = UIColor(red: 205/255, green: 205/255, blue: 205/255, alpha: 1.0).cgColor
-        self.genre.layer.cornerRadius = 5.0;
-        self.genre.layer.borderWidth = 1.0
+        let smallGenreInRealm = realm.objects(SmallGenre.self)
+        
+        for sgr in smallGenreInRealm{
+            genreValues.append(sgr.name)
+        }
+        
+        self.genreRect.layer.borderColor = UIColor(red: 205/255, green: 205/255, blue: 205/255, alpha: 1.0).cgColor
+        self.genreRect.layer.cornerRadius = 5.0;
+        self.genreRect.layer.borderWidth = 1.0
         
         self.genre.delegate = self
         self.genre.dataSource = self
@@ -57,7 +64,7 @@ class NewProduct: UIViewController {
         
         self.newItem.name =
             self.name.text!
-        //self.genre.text = self.thisItem.genre
+        self.newItem.genre = self.genre.currentTitle!
         self.newItem.modelNumber = self.modelNumber.text!
         self.newItem.price = Int(self.price.text!) ?? self.newItem.price
         self.newItem.purchaseDate = self.purchaseDate.text!
@@ -73,7 +80,7 @@ class NewProduct: UIViewController {
         
         self.newAllItem.name =
             self.newItem.name
-        //self.genre.text = self.thisItem.genre
+        self.newAllItem.genre = self.newItem.genre
         self.newAllItem.modelNumber =
         self.newItem.modelNumber
         self.newAllItem.price =
