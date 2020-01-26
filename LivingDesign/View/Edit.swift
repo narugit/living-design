@@ -43,14 +43,15 @@ class Edit: UIViewController {
         self.name.text = self.thisItem.name
         //self.genre.text = self.thisItem.genre
         self.modelNumber.text = self.thisItem.modelNumber
-        self.price.text = String(self.thisItem.price)
+        self.price.text = self.thisItem.price < 0 ? "" :String(self.thisItem.price)
         self.purchaseDate.text = self.thisItem.purchaseDate
         self.reason.text = self.thisItem.reason
-        self.comfort.text = String(self.thisItem.confort)
+        self.comfort.text =
+            self.thisItem.confort < 0 ? "" :String(self.thisItem.confort)
         self.warrantyPeriod.text = self.thisItem.warrantyPeriod
         self.otherTargets.text = self.thisItem.otherTargets
         self.photo.image = UIImage(named:self.thisItem.photo)
-        self.memo.text = self.thisItem.memo
+        //self.memo.text = self.thisItem.memo
         }
         
     @IBAction func TouchUpInsideReturnButton(_ sender: Any) {
@@ -68,14 +69,14 @@ class Edit: UIViewController {
                 self.name.text!
             //self.genre.text = self.thisItem.genre
             self.thisItem.modelNumber = self.modelNumber.text!
-            self.thisItem.price = Int(self.price.text!)!
+            self.thisItem.price = Int(self.price.text!) ?? 0
             self.thisItem.purchaseDate = self.purchaseDate.text!
             self.thisItem.reason = self.reason.text!
-            self.thisItem.confort = Int(self.comfort.text!)!
+            self.thisItem.confort = Int(self.comfort.text!) ?? 0
             self.thisItem.warrantyPeriod = self.warrantyPeriod.text!
             self.thisItem.otherTargets = self.otherTargets.text!
             //self.photo.image = UIImage(named:self.thisItem.photo)
-            self.thisItem.memo = self.memo.text!
+            //self.thisItem.memo = self.memo.text!
             
             //allitemへの登録
             
@@ -95,8 +96,8 @@ class Edit: UIViewController {
             self.thisItem.warrantyPeriod
             self.thisAllItem.otherTargets = self.thisItem.otherTargets
             //self.photo.image = UIImage(named:self.thisItem.photo)
-            self.thisAllItem.memo =
-            self.thisItem.memo
+            //self.thisAllItem.memo =
+            //self.thisItem.memo
         }
         
         //Homeに移動

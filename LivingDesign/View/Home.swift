@@ -36,6 +36,7 @@ class Home: UIViewController, UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
         let itemInRealm = self.realm.objects(Item.self)
+        print(itemInRealm)
         
         
         let cell: UICollectionViewCell =

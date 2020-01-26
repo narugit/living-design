@@ -105,7 +105,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vzd-8c-ieC" customClass="PDFView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vzd-8c-ieC" customClass="UIImageView">
                                 <rect key="frame" x="64.5" y="139" width="285" height="285"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -238,6 +238,13 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VGb-jz-k5S" customClass="Footer" customModule="LivingDesign" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="812" width="414" height="84"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="ZRh-1r-qtu"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -249,6 +256,7 @@
                             <constraint firstItem="nCa-1H-aQi" firstAttribute="leading" secondItem="Yo2-9s-efF" secondAttribute="leading" constant="40" id="A5w-JM-ig5"/>
                             <constraint firstItem="g0P-jw-Pm4" firstAttribute="top" secondItem="j3o-I6-Nqa" secondAttribute="bottom" constant="5" id="A8K-tL-5TB"/>
                             <constraint firstItem="j3o-I6-Nqa" firstAttribute="top" secondItem="bFn-fC-WG9" secondAttribute="bottom" constant="5" id="CZc-Df-vrN"/>
+                            <constraint firstItem="VGb-jz-k5S" firstAttribute="leading" secondItem="Yo2-9s-efF" secondAttribute="leading" id="ChW-Gp-4CT"/>
                             <constraint firstItem="bFn-fC-WG9" firstAttribute="top" secondItem="ora-4N-Fxd" secondAttribute="bottom" constant="39" id="Dh0-mo-nmp"/>
                             <constraint firstItem="DfY-QQ-qzY" firstAttribute="top" secondItem="nCa-1H-aQi" secondAttribute="bottom" constant="5" id="Dhh-9B-ISB"/>
                             <constraint firstItem="gEN-Db-cIn" firstAttribute="leading" secondItem="Yo2-9s-efF" secondAttribute="leading" constant="40" id="EBb-Fl-v9h"/>
@@ -270,8 +278,10 @@
                             <constraint firstItem="Gyd-k6-Zzx" firstAttribute="leading" secondItem="xhP-Vg-qgb" secondAttribute="trailing" id="ell-mx-xMg"/>
                             <constraint firstItem="Qz0-Mm-uq4" firstAttribute="top" secondItem="g0P-jw-Pm4" secondAttribute="bottom" constant="5" id="emC-9k-gug"/>
                             <constraint firstItem="rDm-Bh-axM" firstAttribute="top" secondItem="6XD-yh-XmG" secondAttribute="bottom" constant="5" id="fEA-mg-Sk1"/>
+                            <constraint firstAttribute="bottom" secondItem="VGb-jz-k5S" secondAttribute="bottom" id="fXv-Sf-KBi"/>
                             <constraint firstItem="DlQ-H1-Tsd" firstAttribute="top" secondItem="xhP-Vg-qgb" secondAttribute="bottom" constant="5" id="h6U-EI-9GB"/>
                             <constraint firstItem="Qz0-Mm-uq4" firstAttribute="leading" secondItem="rDm-Bh-axM" secondAttribute="trailing" id="inS-Jh-oc6"/>
+                            <constraint firstItem="Yo2-9s-efF" firstAttribute="trailing" secondItem="VGb-jz-k5S" secondAttribute="trailing" id="kBa-wM-FrZ"/>
                             <constraint firstItem="Vzd-8c-ieC" firstAttribute="top" secondItem="pnr-0w-yBc" secondAttribute="bottom" constant="50" id="ks7-eL-kUY"/>
                             <constraint firstItem="MAk-b2-7cZ" firstAttribute="leading" secondItem="Yo2-9s-efF" secondAttribute="leading" constant="40" id="lRX-vJ-e8y"/>
                             <constraint firstItem="0nR-ra-Pqg" firstAttribute="top" secondItem="Gyd-k6-Zzx" secondAttribute="bottom" constant="5" id="lfc-RR-JIf"/>
@@ -288,7 +298,16 @@
                         <viewLayoutGuide key="safeArea" id="Yo2-9s-efF"/>
                     </view>
                     <connections>
-                        <outlet property="productImage" destination="Vzd-8c-ieC" id="uEr-JW-D3p"/>
+                        <outlet property="comfort" destination="Gyd-k6-Zzx" id="bcF-Uk-8Gb"/>
+                        <outlet property="memo" destination="so5-Yw-dCm" id="KCE-oo-JX4"/>
+                        <outlet property="modelNumber" destination="bFn-fC-WG9" id="ZYU-2n-RAT"/>
+                        <outlet property="name" destination="ora-4N-Fxd" id="L3p-Li-1mM"/>
+                        <outlet property="other" destination="0nR-ra-Pqg" id="hrJ-jH-spO"/>
+                        <outlet property="photo" destination="Vzd-8c-ieC" id="Diq-da-fUf"/>
+                        <outlet property="price" destination="j3o-I6-Nqa" id="1fK-tw-T4j"/>
+                        <outlet property="purchaseDate" destination="g0P-jw-Pm4" id="XVo-QO-B0u"/>
+                        <outlet property="reason" destination="1ZX-ta-7bT" id="0k8-0x-WcI"/>
+                        <outlet property="warrantyPeriod" destination="Qz0-Mm-uq4" id="0jY-za-Qtq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJh-BT-hyq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
