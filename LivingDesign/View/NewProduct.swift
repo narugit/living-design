@@ -9,8 +9,7 @@
 import Foundation
 import UIKit
 import RealmSwift
-
-
+import PickerButton
 
 class NewProduct: UIViewController {
     
@@ -24,6 +23,7 @@ class NewProduct: UIViewController {
     @IBOutlet weak var comfort: UITextField!
     @IBOutlet weak var other: UITextField!
     @IBOutlet weak var memo: UITextField!
+    @IBOutlet weak var genre: PickerButton!
     
     
     var newItem: Item = Item()
@@ -34,9 +34,16 @@ class NewProduct: UIViewController {
     
     private let wireframe: RootViewWireframe = RootViewWireframe()
 
+    let genreValues: [String] = ["家電"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.genre.layer.borderColor = UIColor(red: 205/255, green: 205/255, blue: 205/255, alpha: 1.0).cgColor
+        self.genre.layer.cornerRadius = 5.0;
+        self.genre.layer.borderWidth = 1.0
+        
+        self.genre.delegate = self
+        self.genre.dataSource = self
     }
     
     @IBAction func TouchUpInsideReturnButton(_ sender: Any) {
@@ -98,4 +105,19 @@ class NewProduct: UIViewController {
     
     
 
+}
+
+extension NewProduct: UIPickerViewDelegate, UIPickerViewDataSource {
+
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return genreValues[row]
+    }
+
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return genreValues.count
+    }
 }
