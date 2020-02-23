@@ -60,7 +60,9 @@
 		863359192084EA19900F9075 /* Pods_LivingDesign_LivingDesignUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B0864A8326866EA9BE68969 /* Pods_LivingDesign_LivingDesignUITests.framework */; };
 		9F24B7E8235F01B300035BFD /* Edit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F24B7E7235F01B300035BFD /* Edit.swift */; };
 		9F24B7EA235F056500035BFD /* NewProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F24B7E9235F056400035BFD /* NewProduct.swift */; };
+		9F6A0F9123DDAE6800D5457A /* ChangeItem.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F6A0F9023DDAE6800D5457A /* ChangeItem.storyboard */; };
 		9F77ACCB235DD44000C8E7C0 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F77ACCA235DD44000C8E7C0 /* Detail.swift */; };
+		9F7A4C5B23DDA525004D7654 /* ChangeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F7A4C5A23DDA525004D7654 /* ChangeItem.swift */; };
 		B79F056B1887883B44F576FE /* Pods_LivingDesign.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 375DE56DCAA66455458C36C4 /* Pods_LivingDesign.framework */; };
 /* End PBXBuildFile section */
 
@@ -144,7 +146,9 @@
 		6B0864A8326866EA9BE68969 /* Pods_LivingDesign_LivingDesignUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LivingDesign_LivingDesignUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F24B7E7235F01B300035BFD /* Edit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Edit.swift; sourceTree = "<group>"; };
 		9F24B7E9235F056400035BFD /* NewProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProduct.swift; sourceTree = "<group>"; };
+		9F6A0F9023DDAE6800D5457A /* ChangeItem.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChangeItem.storyboard; sourceTree = "<group>"; };
 		9F77ACCA235DD44000C8E7C0 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		9F7A4C5A23DDA525004D7654 /* ChangeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeItem.swift; sourceTree = "<group>"; };
 		AFA0394071195B0505D9AE90 /* Pods_LivingDesignTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LivingDesignTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB686576C3927117B67891E /* Pods-LivingDesign-LivingDesignUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivingDesign-LivingDesignUITests.debug.xcconfig"; path = "Target Support Files/Pods-LivingDesign-LivingDesignUITests/Pods-LivingDesign-LivingDesignUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED566AAB99403AA6E43D3689 /* Pods-LivingDesign.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LivingDesign.debug.xcconfig"; path = "Target Support Files/Pods-LivingDesign/Pods-LivingDesign.debug.xcconfig"; sourceTree = "<group>"; };
@@ -281,6 +285,8 @@
 				43C37065236D6BBD0033BDCD /* test.storyboard */,
 				43A3B9E3238C068000EBEBC0 /* UILabelWithID.swift */,
 				43A3B9E52391F97A00EBEBC0 /* ResetController.swift */,
+				9F7A4C5A23DDA525004D7654 /* ChangeItem.swift */,
+				9F6A0F9023DDAE6800D5457A /* ChangeItem.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -453,6 +459,7 @@
 				43A3CED3235EE0650009E965 /* washing-machine.pdf in Resources */,
 				436166EF237D7D6000A496EC /* testItemData.json in Resources */,
 				43A3CEE0235EF6110009E965 /* copier.pdf in Resources */,
+				9F6A0F9123DDAE6800D5457A /* ChangeItem.storyboard in Resources */,
 				43407CC5236D72DC00736DF2 /* history.pdf in Resources */,
 				4390DD1A235E8F7C009E3C6F /* RootScreen.storyboard in Resources */,
 				4347AB9D2354A15800AF0F9D /* Home.storyboard in Resources */,
@@ -619,6 +626,7 @@
 				43F8B941235E885D000E084E /* Home.swift in Sources */,
 				436874752361E941001109AF /* DataStructure.swift in Sources */,
 				9F24B7E8235F01B300035BFD /* Edit.swift in Sources */,
+				9F7A4C5B23DDA525004D7654 /* ChangeItem.swift in Sources */,
 				9F77ACCB235DD44000C8E7C0 /* Detail.swift in Sources */,
 				43C07A6C2369CE2500675363 /* Delete.swift in Sources */,
 				9F24B7EA235F056500035BFD /* NewProduct.swift in Sources */,

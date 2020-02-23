@@ -39,6 +39,17 @@ class Edit: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.name.delegate = self as? UITextFieldDelegate
+        self.modelNumber.delegate = self as? UITextFieldDelegate
+        self.price.delegate = self as? UITextFieldDelegate
+        self.purchaseDate.delegate = self as? UITextFieldDelegate
+        self.reason.delegate = self as? UITextFieldDelegate
+        self.comfort.delegate = self as? UITextFieldDelegate
+        self.otherTargets.delegate = self as? UITextFieldDelegate
+        self.warrantyPeriod.delegate = self as? UITextFieldDelegate
+        
+        
         let realm = try! Realm()
         let smallGenreInRealm = realm.objects(SmallGenre.self)
         
@@ -70,10 +81,18 @@ class Edit: UIViewController {
         self.otherTargets.text = self.thisItem.otherTargets
         self.photo.image = UIImage(named:self.thisItem.photo)
         //self.memo.text = self.thisItem.memo
-        }
+        
+        //memo.isScrollEnabled = false
+//        memo.layer.borderWidth = 0.5
+//        memo.layer.borderColor = UIColor(red:0.76, green:0.76, blue:0.76, alpha:1.0).cgColor
+//        memo.layer.cornerRadius = 5.0
+//        memo.layer.masksToBounds = true
+
+       
+    }
         
     @IBAction func TouchUpInsideReturnButton(_ sender: Any) {
-        }
+    }
     
 
     @IBAction func TouchUpInsideRegisterButton(_ sender: Any) {
@@ -117,16 +136,29 @@ class Edit: UIViewController {
             //self.thisAllItem.memo =
             //self.thisItem.memo
         }
+            //Homeに移動
+            let nextStoryBoard = UIStoryboard(name: "Home", bundle: nil)
+            let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: "HomeViewControllerID")
+            self.wireframe.transition(to: nextViewController)
+    }
         
-        //Homeに移動
-        let nextStoryBoard = UIStoryboard(name: "Home", bundle: nil)
-        let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: "HomeViewControllerID")
-        self.wireframe.transition(to: nextViewController)
-        
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            textField.resignFirstResponder()
+
+            return true
     }
     
-    
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        name.resignFirstResponder()
+//        memo.resignFirstResponder()
+        purchaseDate.resignFirstResponder()
+        reason.resignFirstResponder()
+        otherTargets.resignFirstResponder()
+        modelNumber.resignFirstResponder()
+        price.resignFirstResponder()
+        comfort.resignFirstResponder()
+        warrantyPeriod.resignFirstResponder()
+    }
 }
 
 extension Edit: UIPickerViewDelegate, UIPickerViewDataSource {
