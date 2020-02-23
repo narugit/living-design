@@ -1,15 +1,54 @@
 [
-    {"name": "エアコン"},
-    {"name": "オーブン"},
-    {"name": "コーヒーメーカー"},
-    {"name": "コピー機"},
-    {"name": "炊飯器"},
-    {"name": "洗濯機"},
-    {"name": "掃除機"},
-    {"name": "テレビ"},
-    {"name": "電気ケトル"},
-    {"name": "電子レンジ"},
-    {"name": "ドライヤー"},
-    {"name": "冷蔵庫"},
-    {"name": "PC"}
+    {
+        "name": "エアコン",
+        "photoName": "aircon"
+    },
+    {
+        "name": "オーブン",
+        "photoName": "oven"
+    },
+    {
+        "name": "コーヒーメーカー",
+        "photoName": "coffee-machine"
+    },
+    {
+        "name": "コピー機",
+        "photoName": "copier"
+    },
+    {
+        "name": "炊飯器",
+        "photoName": "rice-cooker"
+    },
+    {
+        "name": "洗濯機",
+        "photoName": "washing-machine"
+    },
+    {
+        "name": "掃除機",
+        "photoName": "vacuum"
+    },
+    {
+        "name": "テレビ",
+        "photoName": "tv"
+    },
+    {
+        "name": "電気ケトル",
+        "photoName": "electric-kettle"
+    },
+    {
+        "name": "電子レンジ",
+        "photoName": "microwave"
+    },
+    {
+        "name": "ドライヤー",
+        "photoName": "hairdryer"
+    },
+    {
+        "name": "冷蔵庫",
+        "photoName": "refrigerator"
+    },
+    {
+        "name": "PC",
+        "photoName": "pc"
+    }
 ]

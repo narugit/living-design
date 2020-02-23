@@ -35,14 +35,14 @@ class NewProduct: UIViewController {
     
     private let wireframe: RootViewWireframe = RootViewWireframe()
 
-    var genreValues = [String]()
+    var genreValues = [SmallGenre]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let smallGenreInRealm = realm.objects(SmallGenre.self)
         
         for sgr in smallGenreInRealm{
-            genreValues.append(sgr.name)
+            genreValues.append(sgr)
         }
         
         self.genreRect.layer.borderColor = UIColor(red: 205/255, green: 205/255, blue: 205/255, alpha: 1.0).cgColor
@@ -59,25 +59,24 @@ class NewProduct: UIViewController {
     @IBAction func TouchUpInsideRegisterButton(_ sender: Any) {
       
         let realm = try! Realm()
-        print(newItem)
-        
         
         self.newItem.name =
             self.name.text!
         self.newItem.genre = self.genre.currentTitle!
         self.newItem.modelNumber = self.modelNumber.text!
-        self.newItem.price = Int(self.price.text!) ?? self.newItem.price
+        self.newItem.price = Int(self.price.text!) ?? 0
         self.newItem.purchaseDate = self.purchaseDate.text!
         self.newItem.reason = self.reason.text!
-        self.newItem.confort = Int(self.comfort.text!) ?? self.newItem.confort
+        self.newItem.confort = Int(self.comfort.text!) ?? 0
         //Int(self.comfort.text!)!
         self.newItem.warrantyPeriod = self.warrantyPeriod.text!
         self.newItem.otherTargets = self.other.text!
-        //self.photo.image = UIImage(named:self.thisItem.photo)
+        let selectedGenre = genreValues.filter({ $0.name == self.newItem.genre }).first as! SmallGenre
+        self.newItem.photo = selectedGenre.photoName
         self.newItem.memo = self.memo.text!
         
         //allitemへの登録
-        
+        self.newAllItem.setId(id: self.newItem.getId())
         self.newAllItem.name =
             self.newItem.name
         self.newAllItem.genre = self.newItem.genre
@@ -93,7 +92,7 @@ class NewProduct: UIViewController {
         self.newAllItem.warrantyPeriod =
         self.newItem.warrantyPeriod
         self.newAllItem.otherTargets = self.newItem.otherTargets
-        //self.photo.image = UIImage(named:self.thisItem.photo)
+        self.newAllItem.photo = selectedGenre.photoName
         self.newAllItem.memo =
         self.newItem.memo
             
@@ -117,7 +116,7 @@ class NewProduct: UIViewController {
 extension NewProduct: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return genreValues[row]
+        return genreValues[row].name
     }
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -126,5 +125,11 @@ extension NewProduct: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return genreValues.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if(row != 0){
+            self.photo.image = UIImage(named: genreValues[row].photoName)
+        }
     }
 }

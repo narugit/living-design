@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let config = Realm.Configuration(
             // データ構造変更するたびに更新する必要あり。前よりも大きな値にする
-            schemaVersion: 21,
+            schemaVersion: 22,
             
             //スキーマのバージョンが上記のものよりも低いものを開こうとした場合、自動的に呼び出されるブロックを設定する
             migrationBlock: { migration, oldSchemaVersion in
@@ -41,10 +41,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print(config,"Realm Version")
         
         // small genreの削除
-        let smallGenreInRealm = realm.objects(SmallGenre.self).first
+        let smallGenreInRealm = realm.objects(SmallGenre.self)
         if(smallGenreInRealm != nil){
-            try! realm.write {
-                realm.delete(smallGenreInRealm!)
+            for sgr in smallGenreInRealm{
+                try! realm.write {
+                    realm.delete(sgr)
+                }
             }
             print("smallGenreを削除")
         } else{
@@ -57,6 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         for sgd in smallGenreData{
             let smallGenre = SmallGenre()
             smallGenre.name = sgd.name
+            smallGenre.photoName = sgd.photoName
             
             try! realm.write{
                 realm.add(smallGenre)
