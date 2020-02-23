@@ -22,6 +22,7 @@ class Genre: Object, Decodable{
 
 class SmallGenre: Object, Decodable{
     @objc dynamic var name: String = ""
+    @objc dynamic var photoName: String = ""
 }
 
 class Item: Object, Decodable{

@@ -35,7 +35,7 @@ class Edit: UIViewController {
     var currentSelected : Int?
     private let wireframe: RootViewWireframe = RootViewWireframe()
     
-    var genreValues = [String]()
+    var genreValues = [SmallGenre()]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +43,7 @@ class Edit: UIViewController {
         let smallGenreInRealm = realm.objects(SmallGenre.self)
         
         for sgr in smallGenreInRealm{
-            genreValues.append(sgr.name)
+            genreValues.append(sgr)
         }
         
         self.genreRect.layer.borderColor = UIColor(red: 205/255, green: 205/255, blue: 205/255, alpha: 1.0).cgColor
@@ -80,12 +80,11 @@ class Edit: UIViewController {
         //thisItemに書き込み
         let realm = try! Realm()
         thisAllItem = realm.objects(AllItem.self).filter("id == %@",thisItem.getId()).first!
-        print(thisItem)
         
         try! realm.write(){
             self.thisItem.name =
                 self.name.text!
-            //self.thisItem.genre = self.genre.titleLabel?.text
+            self.thisItem.genre = self.genre.titleLabel!.text!
             self.thisItem.modelNumber = self.modelNumber.text!
             self.thisItem.price = Int(self.price.text!) ?? 0
             self.thisItem.purchaseDate = self.purchaseDate.text!
@@ -93,7 +92,8 @@ class Edit: UIViewController {
             self.thisItem.confort = Int(self.comfort.text!) ?? 0
             self.thisItem.warrantyPeriod = self.warrantyPeriod.text!
             self.thisItem.otherTargets = self.otherTargets.text!
-            //self.photo.image = UIImage(named:self.thisItem.photo)
+            let selectedGenre = genreValues.filter({ $0.name == self.thisItem.genre }).first as! SmallGenre
+            self.thisItem.photo = selectedGenre.photoName
             //self.thisItem.memo = self.memo.text!
             
             //allitemへの登録
@@ -113,7 +113,7 @@ class Edit: UIViewController {
             self.thisAllItem.warrantyPeriod =
             self.thisItem.warrantyPeriod
             self.thisAllItem.otherTargets = self.thisItem.otherTargets
-            //self.photo.image = UIImage(named:self.thisItem.photo)
+            self.thisAllItem.photo = selectedGenre.photoName
             //self.thisAllItem.memo =
             //self.thisItem.memo
         }
@@ -132,7 +132,7 @@ class Edit: UIViewController {
 extension Edit: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return genreValues[row]
+        return genreValues[row].name
     }
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -141,5 +141,11 @@ extension Edit: UIPickerViewDelegate, UIPickerViewDataSource {
 
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return genreValues.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if(row != 0){
+            self.photo.image = UIImage(named: genreValues[row].photoName)
+        }
     }
 }
