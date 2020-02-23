@@ -106,8 +106,8 @@ class Detail: UIViewController {
     }
     
     @IBAction func TouchUpInsideChangeButton(_ sender: Any) {
-        let nextStoryBoard = UIStoryboard(name: "NewProduct", bundle: nil)
-            let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: "NewProductViewControllerID")
+        let nextStoryBoard = UIStoryboard(name: "ChangeItem", bundle: nil)
+            let nextViewController = nextStoryBoard.instantiateViewController(withIdentifier: "ChangeItemViewControllerID")
             self.wireframe.transition(to: nextViewController)
     }
 
