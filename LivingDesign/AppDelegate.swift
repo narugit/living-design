@@ -39,38 +39,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         printRealmFilePath()
         print(realm, "Realm")
         print(config,"Realm Version")
-        
-        // small genreの削除
-        let smallGenreInRealm = realm.objects(SmallGenre.self)
-        if(smallGenreInRealm != nil){
-            for sgr in smallGenreInRealm{
-                try! realm.write {
-                    realm.delete(sgr)
-                }
-            }
-            print("smallGenreを削除")
-        } else{
-            print("smallGenreは空")
-        }
-        
-        let path = Bundle.main.path(forResource: "smallGenreData", ofType:"json")
-        let data = getFileData(path!)
-        let smallGenreData = try! JSONDecoder().decode([SmallGenre].self, from: data!) as! [SmallGenre]
-        for sgd in smallGenreData{
-            let smallGenre = SmallGenre()
-            smallGenre.name = sgd.name
-            smallGenre.photoName = sgd.photoName
-            
-            try! realm.write{
-                realm.add(smallGenre)
-            }
-        }
-        print("smallGenreを追加")
 
         // リリース時には削除する
         // Data/test.*Data.jsonを読み込んで、Realmに書き込む
         // jsonのデータにリセットしたい場合に使用
         // そうでない場合は、下の行をコメントする
+        // ただ、ジャンルだけは、loadするようにしておく
         loadTestData()
         
         // DeleteCandidateが存在するなら、削除しちゃう
@@ -93,6 +67,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func loadTestData(){
         let realm = try! Realm()
+        
+        do{
+            // small genreの削除
+            let smallGenreInRealm = realm.objects(SmallGenre.self)
+            if(smallGenreInRealm != nil){
+                for sgr in smallGenreInRealm{
+                    try! realm.write {
+                        realm.delete(sgr)
+                    }
+                }
+                print("smallGenreを削除")
+            } else{
+                print("smallGenreは空")
+            }
+            
+            let path = Bundle.main.path(forResource: "smallGenreData", ofType:"json")
+            let data = getFileData(path!)
+            let smallGenreData = try! JSONDecoder().decode([SmallGenre].self, from: data!) as! [SmallGenre]
+            for sgd in smallGenreData{
+                let smallGenre = SmallGenre()
+                smallGenre.name = sgd.name
+                smallGenre.photoName = sgd.photoName
+                
+                try! realm.write{
+                    realm.add(smallGenre)
+                }
+            }
+            print("smallGenreを追加")
+        }
         
         do {
             let genreInRealm = realm.objects(Genre.self).first
